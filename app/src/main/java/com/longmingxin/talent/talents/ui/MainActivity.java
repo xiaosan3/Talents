@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         my = (RadioButton) findViewById(R.id.my);
         rg_all.setOnCheckedChangeListener(this);
     }
-
+    //
     @Override
     protected void initData() {
         setContentView(LairFragment.class, R.id.mian_fragment);
