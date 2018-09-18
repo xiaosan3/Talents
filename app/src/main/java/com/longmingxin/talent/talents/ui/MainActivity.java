@@ -20,6 +20,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private RadioButton my;
     private RadioGroup rg_all;
 
+    //我是MainActivity
     @Override
     protected int getContentView() {
         return R.layout.activity_main;
