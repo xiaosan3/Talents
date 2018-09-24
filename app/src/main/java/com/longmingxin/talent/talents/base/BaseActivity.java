@@ -31,21 +31,18 @@ public abstract class BaseActivity<T extends BasePresenter> extends AutoLayoutAc
         presenter = getPresenter();
         if (presenter != null) {
             presenter.attachView(this);
-
         }
         new AuthorityUtils().getPermission();
-
-
-
+        initView();
+        initToolBar();
+        initData();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         App.context = this;
-        initView();
-        initToolBar();
-        initData();
+
     }
 
     @Override

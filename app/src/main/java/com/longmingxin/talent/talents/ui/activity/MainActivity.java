@@ -25,6 +25,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         return R.layout.activity_main;
     }
 
+
     @Override
     protected void initView() {
 
@@ -38,7 +39,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     }
     @Override
     protected void initData() {
+
         setContentView(LairFragment.class, R.id.mian_fragment);
+
     }
 
     @Override
