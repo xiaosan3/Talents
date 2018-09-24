@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/skill_image"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/learning_ability" />
+
+        <TextView
+            android:id="@+id/skill_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="50px"
+            android:layout_toRightOf="@id/skill_image"
+            android:text="每天步行36公里"
+            android:textColor="@color/colorBlack"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/skill_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/skill_type"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/skill_image"
+            android:text="“所以你还是很胖”"
+            android:textSize="24px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/skill_content"
+            android:layout_toRightOf="@id/skill_image">
+
+
+            <TextView
+                android:id="@+id/skill_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginTop="30px"
+                android:text="2018-09-09"
+                android:textSize="24px" />
+
+            <ImageView
+                android:id="@+id/skill_measuring"
+                android:layout_width="122px"
+                android:layout_height="42px"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/measuring_one_test"
+                android:layout_marginRight="20px"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/colorGray"
+        android:layout_marginTop="30px"
+        />
+
+</LinearLayout>

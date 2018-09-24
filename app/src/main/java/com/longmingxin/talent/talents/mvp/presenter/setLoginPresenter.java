@@ -55,7 +55,7 @@ public class setLoginPresenter implements Contract.IsetLoginPresenter {
                     public void accept(final Login login) throws Exception {
                         if (login.getMessage().equals("success")) {
                             iGetLoginView.showMessage("成功！");
-                            iGetLoginView.showLogin(login);
+                            //iGetLoginView.showLogin(login);
                             iGetLoginView.showIntent();
 
                         } else {

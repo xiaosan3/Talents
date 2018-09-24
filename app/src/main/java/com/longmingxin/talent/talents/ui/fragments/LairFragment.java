@@ -1,11 +1,9 @@
 package com.longmingxin.talent.talents.ui.fragments;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.ViewGroup;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseFragment;
@@ -16,10 +14,11 @@ import com.longmingxin.talent.talents.base.BaseFragment;
 public class LairFragment extends BaseFragment {
 
 
+    private RecyclerView home_rv;
+
     public LairFragment() {
         // Required empty public constructor
     }
-
 
 
     @Override

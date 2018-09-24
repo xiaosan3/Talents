@@ -47,7 +47,7 @@ public class setPropertyPresenter implements Contract.IsetPropertyPresenter {
                     public void accept(final Property property) throws Exception {
                         if (property.getCode() == 0) {
                             iGetPropertyView.showMessage("成功！");
-                            iGetPropertyView.showProperty(property);
+                            //iGetPropertyView.showProperty(property);
                         } else {
                             iGetPropertyView.showMessage("请先去登录！");
                             iGetPropertyView.showIntent();

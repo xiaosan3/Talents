@@ -1,13 +1,224 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.fragments.LearningAbilityFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment_learning_ability" />
 
-</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128px"
+        android:background="@color/colorRed">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40px"
+            android:text="学本领"
+            android:textColor="@color/colorWhite"
+            android:textSize="40px" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/course"
+                    android:layout_width="92px"
+                    android:layout_height="92px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shipin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="26px"
+                    android:text="在线教程"
+                    android:textSize="36px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/train"
+                    android:layout_width="92px"
+                    android:layout_height="92px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/jigou" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="26px"
+                    android:text="培训机构"
+                    android:textSize="36px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/skill"
+                    android:layout_width="92px"
+                    android:layout_height="92px"
+                    android:layout_gravity="center"
+                    android:background="@drawable/assessment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="26px"
+                    android:text="技能考核"
+                    android:textSize="36px" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30px"
+            android:background="@color/colorWhite"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:background="@color/colorWhite"
+        >
+        <ImageView
+            android:layout_width="20px"
+            android:layout_height="12px"
+            android:background="@drawable/xing"
+            android:layout_marginTop="18px"
+            />
+        <TextView
+            android:id="@+id/jingpin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="精品教程"
+            android:textSize="36px"
+            android:layout_marginLeft="35px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看全部"
+            android:textSize="36px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80px"
+            />
+        <ImageView
+            android:layout_width="14px"
+            android:layout_height="24px"
+            android:background="@drawable/arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="10px"
+            />
+        <View
+            android:id="@+id/iview"
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="#f0f4f0"
+            android:layout_below="@id/jingpin"
+            android:layout_marginTop="30px"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/iview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:background="@color/colorWhite"
+        >
+        <ImageView
+            android:layout_width="20px"
+            android:layout_height="12px"
+            android:background="@drawable/xing"
+            android:layout_marginTop="18px"
+            />
+        <TextView
+            android:id="@+id/jingpin2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="培训机构"
+            android:textSize="36px"
+            android:layout_marginLeft="35px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查看全部"
+            android:textSize="36px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80px"
+            />
+        <ImageView
+            android:layout_width="14px"
+            android:layout_height="24px"
+            android:background="@drawable/arrow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="10px"
+            />
+        <View
+            android:id="@+id/iview2"
+            android:layout_width="match_parent"
+            android:layout_height="5px"
+            android:background="#f0f4f0"
+            android:layout_below="@id/jingpin2"
+            android:layout_marginTop="30px"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/iview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

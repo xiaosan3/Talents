@@ -1,13 +1,132 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.longmingxin.talent.talents.ui.fragments.JobHuntingFragment">
+    tools:context="com.longmingxin.talent.talents.ui.fragments.JobHuntingFragment"
+    android:orientation="vertical"
+    >
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment_job_hunting" />
+        android:layout_height="128px"
+        android:background="@color/colorRed">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40px"
+            android:text="找工作"
+            android:textColor="@color/colorWhite"
+            android:textSize="40px" />
 
-</FrameLayout>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorRegister"
+            android:paddingBottom="20px"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/zai"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="26px"
+                        android:text="在线教程"
+                        android:textSize="36px" />
+                    <ImageView
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/sanjia"
+                        android:layout_marginTop="30px"
+                        android:text="在线教程"
+                        android:textSize="36px"
+                        android:layout_marginLeft="210px"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="26px"
+                        android:text="培训机构"
+                        android:textSize="36px" />
+                    <ImageView
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/sanjia"
+                        android:layout_marginTop="30px"
+                        android:text="在线教程"
+                        android:textSize="36px"
+                        android:layout_marginLeft="210px"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="26px"
+                        android:text="技能考核"
+                        android:textSize="36px" />
+                    <ImageView
+                        android:layout_width="30px"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:src="@drawable/sanjia"
+                        android:layout_marginTop="30px"
+                        android:text="在线教程"
+                        android:textSize="36px"
+                        android:layout_marginLeft="210px"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+</LinearLayout>

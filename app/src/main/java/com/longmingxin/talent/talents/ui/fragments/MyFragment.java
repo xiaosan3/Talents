@@ -13,6 +13,7 @@ import com.longmingxin.talent.talents.base.BaseFragment;
 public class MyFragment extends BaseFragment {
 
 
+
     public MyFragment() {
         // Required empty public constructor
     }

@@ -1,4 +1,4 @@
-package com.longmingxin.talent.talents.ui;
+package com.longmingxin.talent.talents.ui.activity;
 
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
@@ -20,7 +20,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     private RadioButton my;
     private RadioGroup rg_all;
 
-    //我是MainActivity
     @Override
     protected int getContentView() {
         return R.layout.activity_main;
@@ -37,7 +36,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         my = (RadioButton) findViewById(R.id.my);
         rg_all.setOnCheckedChangeListener(this);
     }
-    //
     @Override
     protected void initData() {
         setContentView(LairFragment.class, R.id.mian_fragment);
@@ -52,7 +50,6 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         switch (checkedId){
             case R.id.transaction:
-
                 setContentView(LairFragment.class, R.id.mian_fragment);
                 break;
             case R.id.order:

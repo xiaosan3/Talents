@@ -1,13 +1,483 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.fragments.LairFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment_lair" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner
+                android:layout_width="750px"
+                android:layout_height="392px"
+                android:background="@color/colorRed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10px">
+
+                    <ImageView
+                        android:id="@+id/aa"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="15px"
+                        android:src="@drawable/dingwei" />
+
+                    <TextView
+                        android:id="@+id/address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="10px"
+                        android:layout_toRightOf="@id/aa"
+                        android:text="青岛"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="36px" />
+
+                    <RelativeLayout
+                        android:layout_width="576px"
+                        android:layout_height="62px"
+                        android:layout_marginLeft="10px"
+                        android:layout_toRightOf="@id/address"
+                        android:background="@drawable/search"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/search_image"
+                            android:layout_width="30px"
+                            android:layout_height="30px"
+                            android:layout_marginLeft="100px"
+                            android:layout_marginTop="20px"
+                            android:background="@drawable/search_image" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="8px"
+                            android:layout_toRightOf="@id/search_image"
+                            android:background="@null"
+                            android:hint="输入您想要找的工作" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </com.youth.banner.Banner>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="710px"
+                    android:layout_height="100px"
+                    android:layout_marginLeft="20px"
+                    android:layout_marginTop="20px"
+                    android:background="@drawable/gray"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20px"
+                        android:background="@drawable/yinpin" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10px"
+                        android:text="xxx通过xxx培训，取得xxx资格证书"
+                        android:textColor="@color/colorYin"
+                        android:textSize="30px" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40px">
+
+                    <RadioGroup
+                        android:id="@+id/rg_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/transaction"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableTop="@drawable/xinzi"
+                            android:gravity="center"
+                            android:text="高薪岗位"
+                            android:textColor="@color/colorYin" />
+
+                        <RadioButton
+                            android:id="@+id/order"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/recommend"
+                            android:gravity="center"
+                            android:text="智能推荐"
+                            android:textColor="@color/colorYin" />
+
+                        <RadioButton
+                            android:id="@+id/property"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/rapidly"
+                            android:gravity="center"
+                            android:text="急聘道"
+                            android:textColor="@color/colorYin" />
+
+                        <RadioButton
+                            android:id="@+id/my"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:button="@null"
+                            android:drawableTop="@drawable/passageway"
+                            android:gravity="center"
+                            android:text="专享通道"
+                            android:textColor="@color/colorYin" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/home_rv"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:layout_marginTop="30px"
+                android:background="@color/colorWhite" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="210px"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:padding="10px">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="330px"
+                        android:layout_height="210px"
+                        android:background="@drawable/learning_ability" />
+
+                    <TextView
+                        android:id="@+id/learnint_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="20px"
+                        android:text="学本领"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="50px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/learnint_text"
+                        android:layout_marginLeft="10px"
+                        android:layout_marginTop="10px"
+                        android:text="LEARNING ABILITY"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="22px" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="330px"
+                            android:layout_height="120px"
+                            android:background="@drawable/learning_ability" />
+
+                        <TextView
+                            android:id="@+id/learnint_text2"
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:text="学本领"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="35px" />
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/learnint_text2"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="0px"
+                            android:gravity="center"
+                            android:text="LEARNING ABILITY"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20px" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="330px"
+                            android:layout_height="120px"
+                            android:background="@drawable/learning_ability" />
+
+                        <TextView
+                            android:id="@+id/learnint_text2"
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:text="学本领"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="35px" />
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/learnint_text2"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="0px"
+                            android:gravity="center"
+                            android:text="LEARNING ABILITY"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20px" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="330px"
+                            android:layout_height="120px"
+                            android:background="@drawable/learning_ability" />
+
+                        <TextView
+                            android:id="@+id/learnint_text2"
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:text="学本领"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="35px" />
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/learnint_text2"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="0px"
+                            android:gravity="center"
+                            android:text="LEARNING ABILITY"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20px" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10px"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="330px"
+                            android:layout_height="120px"
+                            android:background="@drawable/learning_ability" />
+
+                        <TextView
+                            android:id="@+id/learnint_text2"
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="20px"
+                            android:gravity="center"
+                            android:text="学本领"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="35px" />
+
+                        <TextView
+                            android:layout_width="330px"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/learnint_text2"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginTop="0px"
+                            android:gravity="center"
+                            android:text="LEARNING ABILITY"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="20px" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+                <Button
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="750px"
+                android:layout_height="140px"
+                android:src="@drawable/shipin"
+                android:layout_marginTop="20px"
+                android:layout_marginBottom="20px"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorWhite"
+                >
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="12px"
+                    android:background="@drawable/xing"
+                    android:layout_marginTop="30px"
+                    />
+                <TextView
+                    android:id="@+id/jingpin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="在招项目"
+                    android:textSize="36px"
+                    android:layout_marginLeft="35px"
+                    android:padding="20px"
+                    />
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/colorWhite"
+                >
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="12px"
+                    android:background="@drawable/xing"
+                    android:layout_marginTop="30px"
+                    />
+                <TextView
+                    android:id="@+id/jingpin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="为你推荐"
+                    android:textSize="36px"
+                    android:layout_marginLeft="35px"
+                    android:padding="20px"
+                    />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

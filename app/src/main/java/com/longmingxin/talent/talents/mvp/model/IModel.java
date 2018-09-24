@@ -1,7 +1,6 @@
 package com.longmingxin.talent.talents.mvp.model;
 
 
-
 import com.longmingxin.talent.talents.bean.Business;
 import com.longmingxin.talent.talents.bean.Login;
 import com.longmingxin.talent.talents.bean.Property;

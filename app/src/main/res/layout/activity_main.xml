@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.longmingxin.talent.talents.ui.MainActivity">
+    tools:context="com.longmingxin.talent.talents.ui.activity.MainActivity">
 
     <FrameLayout
         android:id="@+id/mian_fragment"
@@ -33,9 +33,9 @@
                 android:layout_weight="1"
                 android:button="@null"
                 android:checked="true"
-                android:drawableTop="@drawable/transaction_image"
+                android:drawableTop="@drawable/homepage"
                 android:gravity="center"
-                android:text="交易"
+                android:text="首页"
                 android:textColor="@drawable/buttom_text" />
 
             <RadioButton
@@ -44,9 +44,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/order_image"
+                android:drawableTop="@drawable/ability_image"
                 android:gravity="center"
-                android:text="订单"
+                android:text="本领"
                 android:textColor="@drawable/buttom_text" />
 
             <RadioButton
@@ -55,9 +55,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:button="@null"
-                android:drawableTop="@drawable/property_image"
+                android:drawableTop="@drawable/sousuo"
                 android:gravity="center"
-                android:text="资产"
+                android:text="找工作"
                 android:textColor="@drawable/buttom_text" />
 
             <RadioButton

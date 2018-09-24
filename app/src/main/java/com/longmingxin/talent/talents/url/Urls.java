@@ -4,9 +4,10 @@ package com.longmingxin.talent.talents.url;
  * Created by 77 on 2018/5/16.
  */
 
-public class Urls {
+public class Urls  {
 
     //OTC
+
     public static final String OTC = "https://otc.coinauc.com/";
 
     //极验

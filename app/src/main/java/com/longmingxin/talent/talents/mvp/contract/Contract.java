@@ -1,10 +1,10 @@
 package com.longmingxin.talent.talents.mvp.contract;
 
 
+import android.util.Property;
+
 import com.longmingxin.talent.talents.base.BasePresenter;
 import com.longmingxin.talent.talents.bean.Business;
-import com.longmingxin.talent.talents.bean.Login;
-import com.longmingxin.talent.talents.bean.Property;
 
 /**
  * Created by 77 on 2018/5/16.
@@ -51,7 +51,7 @@ public interface Contract {
 
         void showMessage(String message);
 
-        void showLogin(Login login);
+        //void showLogin(Login login);
 
         void showIntent();
     }

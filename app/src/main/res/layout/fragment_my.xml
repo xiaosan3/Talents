@@ -1,13 +1,76 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment">
+    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment"
+    android:orientation="vertical"
+    >
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment_my" />
+        android:layout_height="328px"
+        android:background="@color/colorRed"
+        android:orientation="vertical"
+        >
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="40px"
+            android:textSize="40px" />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            >
+            <ImageView
+                android:id="@+id/head_image"
+                android:layout_width="130px"
+                android:layout_height="130px"
+                android:background="@drawable/shipin"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="20px"
+                />
+            
+            <TextView
+                android:id="@+id/not_logged_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未登录"
+                android:layout_toRightOf="@id/head_image"
+                android:textSize="40px"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="30px"
+                android:layout_marginLeft="20px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击登录"
+                android:layout_toRightOf="@id/head_image"
+                android:layout_below="@id/not_logged_in"
+                android:textSize="30px"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="30px"
+                android:layout_marginLeft="20px"
+                />
+            
+            <ImageView
+                android:layout_width="32px"
+                android:layout_height="38px"
+                android:background="@drawable/xiala_image"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="90px"
+                android:layout_marginRight="20px"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>
