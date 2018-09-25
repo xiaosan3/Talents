@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/course_image"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/learning_ability" />
+
+        <TextView
+            android:id="@+id/course_Open_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="50px"
+            android:layout_toRightOf="@id/course_image"
+            android:text="零基础入门，电气公开课"
+            android:textColor="@color/colorBlack"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/course_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/course_Open_class"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_image"
+            android:text="课时："
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/course_KeShi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/course_Open_class"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_text"
+            android:text="1"
+            android:textColor="@color/colorRed"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/course_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/course_KeShi"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_image"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="通过公开课试听了解更多关于课程内容，对整个学习"
+            android:textSize="26px" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="30px"
+        android:background="@color/colorGray" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/course_BaoMing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1537人报名"
+            android:padding="30px"
+            />
+
+        <View
+            android:id="@+id/caurse_view"
+            android:layout_width="2px"
+            android:layout_height="40px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_BaoMing"
+            android:background="@color/colorGray" />
+
+        <TextView
+            android:layout_toRightOf="@id/caurse_view"
+            android:id="@+id/course_RenShu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="982"
+            android:layout_marginTop="30px"
+            android:layout_marginLeft="30px"
+            android:textColor="@color/colorRed"
+            />
+        <TextView
+            android:layout_toRightOf="@id/course_RenShu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人成功离职"
+            android:layout_marginTop="30px"
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

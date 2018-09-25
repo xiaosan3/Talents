@@ -13,6 +13,7 @@
         android:background="@color/colorRed">
 
         <ImageView
+            android:id="@+id/course_return_button"
             android:layout_width="30px"
             android:layout_height="40px"
             android:layout_marginLeft="10px"
@@ -33,29 +34,133 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="110px"
+        android:layout_height="130px"
         android:background="@color/colorWhite"
-        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="0px"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/course_QuanBu"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="1">
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px">
 
             <ImageView
-                android:layout_width="130px"
-                android:layout_height="70px"
-                android:layout_gravity="center"
-                android:background="@drawable/rectangle" />
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:background="@drawable/entity_frame" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="全部"
+                android:textColor="@color/colorWhite"
+                android:textSize="24px" />
+        </RelativeLayout>
 
-                />
-        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/course_WeiXiu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_QuanBu">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:background="@drawable/square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="维修"
+                android:textColor="@color/colorRed"
+                android:textSize="24px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/course_DianNao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_WeiXiu">
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:background="@drawable/square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="电脑"
+                android:textColor="@color/colorRed"
+                android:textSize="24px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/course_ShuJu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_DianNao">
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:background="@drawable/square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="数据"
+                android:textColor="@color/colorRed"
+                android:textSize="24px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/course_QiChe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@id/course_ShuJu">
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="60px"
+                android:background="@drawable/square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="汽车"
+                android:textColor="@color/colorRed"
+                android:textSize="24px" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/course_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20px"
+        android:background="@color/colorWhite"></android.support.v7.widget.RecyclerView>
 </LinearLayout>

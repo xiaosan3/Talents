@@ -1,5 +1,6 @@
 package com.longmingxin.talent.talents.ui.newactivity;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -36,9 +37,14 @@ public class SkillActivity extends BaseActivity implements View.OnClickListener{
         skill_rv.setLayoutManager(layoutManager);
         //给RecyclerView设置适配器
         skill_rv.setAdapter(adapter);
-
-
+        adapter.setOnclick(new Skill_SubAdapter.Onclick() {
+            @Override
+            public void onclicks(View v, int option) {
+                startActivity(new Intent(SkillActivity.this,MeasuringActivity.class));
+            }
+        });
     }
+
 
     @Override
     protected void initData() {
