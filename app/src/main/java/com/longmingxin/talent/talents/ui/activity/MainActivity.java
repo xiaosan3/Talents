@@ -9,7 +9,7 @@ import com.longmingxin.talent.talents.base.BaseActivity;
 import com.longmingxin.talent.talents.ui.fragments.JobHuntingFragment;
 import com.longmingxin.talent.talents.ui.fragments.LairFragment;
 import com.longmingxin.talent.talents.ui.fragments.LearningAbilityFragment;
-import com.longmingxin.talent.talents.ui.fragments.MyFragment;
+import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyFragment;
 
 public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedChangeListener {
 

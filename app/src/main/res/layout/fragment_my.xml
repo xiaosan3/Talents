@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment">
+    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
                 android:textSize="40px" />
 
             <RelativeLayout
+                android:id="@+id/my_information"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10px">
@@ -79,7 +80,7 @@
             android:background="#ffffff">
 
             <RelativeLayout
-                android:id="@+id/my_jianli"
+                android:id="@+id/my_curriculum_vitae"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="26px"
@@ -90,7 +91,7 @@
                     android:layout_height="92px"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/gerenjianli" />
+                    android:src="@mipmap/curriculum_vitae" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -103,7 +104,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/my_toudi"
+                android:id="@+id/my_delivery_records"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="26px"
@@ -113,7 +114,7 @@
                     android:layout_width="92px"
                     android:layout_height="92px"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/toudijilu" />
+                    android:src="@mipmap/delivery_records" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -126,7 +127,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/my_miahsi"
+                android:id="@+id/my_interview_records"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginTop="26px"
@@ -136,7 +137,8 @@
                     android:layout_width="92px"
                     android:layout_height="92px"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/mianshijilu" />
+                    android:src="@mipmap/interview_records"
+                     />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -159,7 +161,7 @@
         android:background="#ffffff" />
 
     <RelativeLayout
-        android:id="@+id/my_kecheng"
+        android:id="@+id/my_curriculum"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -169,7 +171,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/kecheng" />
+            android:src="@mipmap/curriculum" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -198,7 +200,7 @@
         android:background="#000000" />
 
     <RelativeLayout
-        android:id="@+id/my_dingdan"
+        android:id="@+id/my_order"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -208,7 +210,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/dingdan" />
+            android:src="@mipmap/order" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -237,7 +239,7 @@
         android:background="#000000" />
 
     <RelativeLayout
-        android:id="@+id/my_guanzhu"
+        android:id="@+id/my_follow"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -247,7 +249,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/guanzhu" />
+            android:src="@mipmap/follow" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -276,7 +278,7 @@
         android:background="#000000" />
 
     <RelativeLayout
-        android:id="@+id/my_xiaoxi"
+        android:id="@+id/my_news"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -286,7 +288,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/xiaoxi" />
+            android:src="@mipmap/news" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -315,7 +317,7 @@
 
 
     <RelativeLayout
-        android:id="@+id/my_zuzhi"
+        android:id="@+id/my_team"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -325,7 +327,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/zuzhi" />
+            android:src="@mipmap/team" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -354,7 +356,7 @@
         android:background="#000000" />
 
     <RelativeLayout
-        android:id="@+id/my_guanyu"
+        android:id="@+id/my_about"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -364,7 +366,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/guanyu" />
+            android:src="@mipmap/about" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -393,7 +395,7 @@
         android:background="#000000" />
 
     <RelativeLayout
-        android:id="@+id/my_shezhi"
+        android:id="@+id/my_setting"
         android:layout_width="match_parent"
         android:layout_height="80px"
         android:background="#ffffff">
@@ -403,7 +405,7 @@
             android:layout_height="34px"
             android:layout_centerVertical="true"
             android:layout_marginLeft="54px"
-            android:src="@mipmap/shezhi" />
+            android:src="@mipmap/setting" />
 
         <TextView
             android:layout_width="wrap_content"

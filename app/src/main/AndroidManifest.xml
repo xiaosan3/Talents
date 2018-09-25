@@ -38,7 +38,20 @@
         <activity android:name=".ui.newactivity.CourseActivity" />
         <activity android:name=".ui.newactivity.TrainActivity" />
         <activity android:name=".ui.newactivity.SkillActivity" />
-        <activity android:name=".ui.newactivity.MeasuringActivity"></activity>
+        <activity android:name=".ui.newactivity.MeasuringActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.CurriculumVitaeActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.DeliveryRecordsActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.InterviewRecordsActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyCurriculumActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyOrderActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyFollowActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyNewsActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyTeamActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyAboutActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.MySettingActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.My_InformationActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.EducationActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.BackgroundActivity"></activity>
     </application>
 
 </manifest>

@@ -26,12 +26,11 @@ public class ToolBarUtils {
     public void setNavigation(Toolbar toolbar) {
         toolbar.setTitle("");
         App.context.setSupportActionBar(toolbar);
-        toolbar.setNavigationIcon(R.mipmap.ic_launcher);
+        toolbar.setNavigationIcon(R.drawable.return_button);
         //设置回退监听
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 App.context.finish();
             }
         });
