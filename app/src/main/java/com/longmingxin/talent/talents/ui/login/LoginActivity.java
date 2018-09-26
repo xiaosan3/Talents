@@ -22,10 +22,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     @Override
     protected void initView() {
-//        m_toolbar = (Toolbar) findViewById(m_toolbar);
-//        m_toolbar.setTitle("");
-//        setSupportActionBar(m_toolbar);
-
 
         login = (Button) findViewById(R.id.login);
         login.setOnClickListener(this);

@@ -2,6 +2,7 @@ package com.longmingxin.talent.talents.ui.newactivity;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
@@ -13,7 +14,7 @@ import com.longmingxin.talent.talents.ui.adapter.Course_SubAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseActivity extends BaseActivity {
+public class CourseActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView course_return_button;
     private RelativeLayout course_QuanBu;
@@ -40,6 +41,7 @@ public class CourseActivity extends BaseActivity {
         course_ShuJu = (RelativeLayout) findViewById(R.id.course_ShuJu);
         course_QiChe = (RelativeLayout) findViewById(R.id.course_QiChe);
         course_RecyclerView = (RecyclerView) findViewById(R.id.course_RecyclerView);
+        course_return_button.setOnClickListener(this);
 
         adapter = new Course_SubAdapter(R.layout.course_item, mlist);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -62,4 +64,12 @@ public class CourseActivity extends BaseActivity {
 
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.course_return_button:
+                finish();
+                break;
+        }
+    }
 }
