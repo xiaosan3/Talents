@@ -1,7 +1,8 @@
 package com.longmingxin.talent.talents.bean;
 
 /**
- * Created by 77 on 2018/8/13.
+ * Created by ASUS on 2018/9/19.
+ *
  */
 
 public class Login {

@@ -13,7 +13,8 @@ import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 /**
- * Created by 77 on 2018/5/16.
+ * Created by ASUS on 2018/9/26.
+ *
  */
 
 public interface IModel {

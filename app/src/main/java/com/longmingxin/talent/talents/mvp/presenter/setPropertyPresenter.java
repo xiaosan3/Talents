@@ -12,7 +12,8 @@ import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 /**
- * Created by 77 on 2018/8/8.
+ * Created by ASUS on 2018/9/26.
+ *
  */
 
 public class setPropertyPresenter implements Contract.IsetPropertyPresenter {

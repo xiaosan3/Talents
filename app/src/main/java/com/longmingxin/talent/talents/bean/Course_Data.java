@@ -1,7 +1,7 @@
 package com.longmingxin.talent.talents.bean;
 
 /**
- * Created by ASUS on 2018/9/25.
+ * Created by ASUS on 2018/9/19.
  */
 
 public class Course_Data {

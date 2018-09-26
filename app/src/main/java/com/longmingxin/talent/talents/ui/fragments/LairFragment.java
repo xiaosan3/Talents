@@ -19,6 +19,7 @@ import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseFragment;
 import com.longmingxin.talent.talents.bean.Exclusive_Data;
 import com.longmingxin.talent.talents.ui.adapter.Exclusive_SubAdapter;
+import com.longmingxin.talent.talents.ui.newactivity.CourseActivity;
 import com.longmingxin.talent.talents.ui.newactivity.lair.Exclusive_channelActivity;
 import com.longmingxin.talent.talents.ui.newactivity.lair.High_salary_postActivity;
 import com.longmingxin.talent.talents.ui.newactivity.lair.Intelligent_recommendationActivity;
@@ -85,10 +86,31 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
         lair_Exclusive_channel = view.findViewById(R.id.lair_Exclusive_channel);
         lair_tuijian_rv = view.findViewById(R.id.lair_tuijian_rv);
 
+        lair_plumber_and_electrician = view.findViewById(R.id.lair_plumber_and_electrician);
+        lair_Welder = view.findViewById(R.id.lair_Welder);
+        lair_Architect = view.findViewById(R.id.lair_Architect);
+        lair_Designer = view.findViewById(R.id.lair_Designer);
+        lair_Security_officer = view.findViewById(R.id.lair_Security_officer);
+        lair_Bricklayer = view.findViewById(R.id.lair_Bricklayer);
+        lair_Machinist = view.findViewById(R.id.lair_Machinist);
+        lair_More = view.findViewById(R.id.lair_More);
+
         lair_High_salary_post.setOnClickListener(this);
         lair_Intelligent_recommendation.setOnClickListener(this);
         lair_Urgent_job.setOnClickListener(this);
         lair_Exclusive_channel.setOnClickListener(this);
+
+        lair_plumber_and_electrician.setOnClickListener(this);
+        lair_Welder.setOnClickListener(this);
+        lair_Architect.setOnClickListener(this);
+        lair_Designer.setOnClickListener(this);
+        lair_Security_officer.setOnClickListener(this);
+        lair_Bricklayer.setOnClickListener(this);
+        lair_Machinist.setOnClickListener(this);
+        lair_More.setOnClickListener(this);
+
+
+
         adapter = new Exclusive_SubAdapter(R.layout.exclusive_item, mlist);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         lair_tuijian_rv.setLayoutManager(layoutManager);
@@ -121,6 +143,30 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
 
             case R.id.lair_Exclusive_channel:
                 startActivity(new Intent(getActivity(), Exclusive_channelActivity.class));
+                break;
+            case R.id.lair_plumber_and_electrician:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_Welder:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_Architect:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_Designer:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_Security_officer:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_Bricklayer:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_Machinist:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
+                break;
+            case R.id.lair_More:
+                startActivity(new Intent(getActivity(), CourseActivity.class));
                 break;
         }
     }
