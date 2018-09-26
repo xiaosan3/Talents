@@ -51,7 +51,10 @@
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MySettingActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.My_InformationActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.EducationActivity" />
-        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.BackgroundActivity"></activity>
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.BackgroundActivity" />
+        <activity android:name=".foundwork.ui.activity.PostInformationActivity" />
+        <activity android:name=".foundwork.ui.activity.EnterpriseReviewActivity" />
+        <activity android:name=".foundwork.ui.activity.EnterpriseInformationActivity"></activity>
     </application>
 
 </manifest>

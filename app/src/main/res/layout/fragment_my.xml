@@ -137,7 +137,6 @@
                     android:layout_width="92px"
                     android:layout_height="92px"
                     android:layout_centerHorizontal="true"
-                    android:src="@mipmap/interview_records"
                      />
 
                 <TextView

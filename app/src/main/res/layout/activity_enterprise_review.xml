@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_enterprise_review"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.longmingxin.talent.talents.foundwork.ui.activity.EnterpriseReviewActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="128px"
+            android:layout_marginLeft="30px"
+            android:src="@drawable/return_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="企业点评"
+            android:textColor="@color/colorWhite"
+            android:textSize="40px" />
+        <TextView
+            android:text="点评"
+            android:textColor="@color/colorWhite"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <android.support.v7.app.AlertController.RecycleListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.app.AlertController.RecycleListView>
+    <TextView
+        android:layout_marginTop="30px"
+        android:text="详细评价"
+        android:textSize="30px"
+        android:layout_marginLeft="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:background="@drawable/bg_opinion_frame"
+        android:orientation="vertical"
+        android:layout_marginTop="30px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_width="match_parent"
+        android:layout_height="300px" >
+        <EditText
+            android:hint="写下面试体会和入职感受来帮助其他朋友"
+            android:textSize="30px"
+            android:gravity="top"
+            android:textColorHint="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="200px" />
+        <LinearLayout
+            android:gravity="right|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <CheckBox
+                android:layout_width="24px"
+                android:layout_height="24px" />
+            <TextView
+                android:text="匿名评价"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:text="添加图片，参与抽奖（0/3）"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_marginTop="40px"
+        android:layout_marginLeft="30px"
+        android:src="@drawable/img"
+        android:layout_width="200px"
+        android:layout_height="200px" />
+</LinearLayout>
