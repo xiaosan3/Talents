@@ -6,9 +6,9 @@ import com.longmingxin.talent.talents.mvp.contract.Contract;
 import com.longmingxin.talent.talents.mvp.model.IModel;
 
 /**
- * Created by 77 on 2018/8/8.
+ * Created by ASUS on 2018/9/26.
+ *
  */
-
 public class setRegisterPresenter implements Contract.IsetRegisterPresenter {
 
     private IModel iModel;

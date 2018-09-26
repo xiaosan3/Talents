@@ -26,7 +26,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by 77 on 2018/5/23.
+ * Created by ASUS on 2018/9/19.
+ *
  */
 
 public class AuthorityUtils extends AppCompatActivity {

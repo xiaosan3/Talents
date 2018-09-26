@@ -1,9 +1,8 @@
 package com.longmingxin.talent.talents.bean;
 
 import java.util.List;
-
 /**
- * Created by 77 on 2018/8/18.
+ * Created by ASUS on 2018/9/19.
  * 账单明细
  */
 

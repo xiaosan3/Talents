@@ -15,6 +15,7 @@
             android:orientation="vertical">
 
             <com.youth.banner.Banner
+                android:id="@+id/lair_Banner"
                 android:layout_width="750px"
                 android:layout_height="392px"
                 android:background="@color/colorRed">
@@ -25,7 +26,7 @@
                     android:layout_marginTop="10px">
 
                     <ImageView
-                        android:id="@+id/aa"
+                        android:id="@+id/lair_Location"
                         android:layout_width="40px"
                         android:layout_height="40px"
                         android:layout_marginLeft="10px"
@@ -33,12 +34,12 @@
                         android:src="@drawable/dingwei" />
 
                     <TextView
-                        android:id="@+id/address"
+                        android:id="@+id/lair_address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10px"
                         android:layout_marginTop="10px"
-                        android:layout_toRightOf="@id/aa"
+                        android:layout_toRightOf="@id/lair_Location"
                         android:text="青岛"
                         android:textColor="@color/colorWhite"
                         android:textSize="36px" />
@@ -47,13 +48,13 @@
                         android:layout_width="576px"
                         android:layout_height="62px"
                         android:layout_marginLeft="10px"
-                        android:layout_toRightOf="@id/address"
+                        android:layout_toRightOf="@id/lair_address"
                         android:background="@drawable/search"
 
                         >
 
                         <ImageView
-                            android:id="@+id/search_image"
+                            android:id="@+id/lair_search_image"
                             android:layout_width="30px"
                             android:layout_height="30px"
                             android:layout_marginLeft="100px"
@@ -61,11 +62,12 @@
                             android:background="@drawable/search_image" />
 
                         <EditText
+                            android:id="@+id/lair_search_ed"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="8px"
-                            android:layout_toRightOf="@id/search_image"
+                            android:layout_toRightOf="@id/lair_search_image"
                             android:background="@null"
                             android:hint="输入您想要找的工作" />
                     </RelativeLayout>
@@ -83,9 +85,7 @@
                     android:layout_height="100px"
                     android:layout_marginLeft="20px"
                     android:layout_marginTop="20px"
-                    android:background="@drawable/gray"
-
-                    >
+                    android:background="@drawable/gray">
 
                     <ImageView
                         android:layout_width="32px"
@@ -106,7 +106,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150px"
                     android:layout_marginTop="40px">
 
                     <RadioGroup
@@ -117,7 +117,7 @@
                         android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/transaction"
+                            android:id="@+id/lair_High_salary_post"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -129,7 +129,7 @@
                             android:textColor="@color/colorYin" />
 
                         <RadioButton
-                            android:id="@+id/order"
+                            android:id="@+id/lair_Intelligent_recommendation"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -140,7 +140,7 @@
                             android:textColor="@color/colorYin" />
 
                         <RadioButton
-                            android:id="@+id/property"
+                            android:id="@+id/lair_Urgent_job"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -151,7 +151,7 @@
                             android:textColor="@color/colorYin" />
 
                         <RadioButton
-                            android:id="@+id/my"
+                            android:id="@+id/lair_Exclusive_channel"
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
@@ -165,7 +165,7 @@
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/home_rv"
+                android:id="@+id/lair_RecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="150px"
                 android:layout_marginTop="30px"
@@ -179,6 +179,7 @@
                 android:padding="10px">
 
                 <RelativeLayout
+                    android:id="@+id/lair_Learning_ability"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
@@ -210,6 +211,7 @@
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/lair_Free_course"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10px"
@@ -224,32 +226,33 @@
                         <ImageView
                             android:layout_width="330px"
                             android:layout_height="120px"
-                            android:background="@drawable/learning_ability" />
+                            android:background="@mipmap/kecheng" />
 
                         <TextView
-                            android:id="@+id/learnint_text2"
+                            android:id="@+id/mianfei"
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="20px"
                             android:gravity="center"
-                            android:text="学本领"
+                            android:text="免费课程"
                             android:textColor="@color/colorWhite"
                             android:textSize="35px" />
 
                         <TextView
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/learnint_text2"
+                            android:layout_below="@id/mianfei"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="0px"
                             android:gravity="center"
-                            android:text="LEARNING ABILITY"
+                            android:text="Free course"
                             android:textColor="@color/colorWhite"
                             android:textSize="20px" />
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/lair_Teacher_lecture_hall"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10px"
@@ -258,27 +261,27 @@
                         <ImageView
                             android:layout_width="330px"
                             android:layout_height="120px"
-                            android:background="@drawable/learning_ability" />
+                            android:background="@mipmap/mingshi" />
 
                         <TextView
-                            android:id="@+id/learnint_text2"
+                            android:id="@+id/teacher"
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="20px"
                             android:gravity="center"
-                            android:text="学本领"
+                            android:text="名师讲堂"
                             android:textColor="@color/colorWhite"
                             android:textSize="35px" />
 
                         <TextView
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/learnint_text2"
+                            android:layout_below="@id/teacher"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="0px"
                             android:gravity="center"
-                            android:text="LEARNING ABILITY"
+                            android:text="TEACHER lecture hall "
                             android:textColor="@color/colorWhite"
                             android:textSize="20px" />
                     </RelativeLayout>
@@ -294,6 +297,7 @@
                     android:orientation="vertical">
 
                     <RelativeLayout
+                        android:id="@+id/lair_Skill_assessment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1">
@@ -301,32 +305,33 @@
                         <ImageView
                             android:layout_width="330px"
                             android:layout_height="120px"
-                            android:background="@drawable/learning_ability" />
+                            android:background="@mipmap/jineng" />
 
                         <TextView
-                            android:id="@+id/learnint_text2"
+                            android:id="@+id/jineng"
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="20px"
                             android:gravity="center"
-                            android:text="学本领"
+                            android:text="技能考核"
                             android:textColor="@color/colorWhite"
                             android:textSize="35px" />
 
                         <TextView
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/learnint_text2"
+                            android:layout_below="@id/jineng"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="0px"
                             android:gravity="center"
-                            android:text="LEARNING ABILITY"
+                            android:text="Skill assessment"
                             android:textColor="@color/colorWhite"
                             android:textSize="20px" />
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/lair_The_industry_standard"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10px"
@@ -335,144 +340,163 @@
                         <ImageView
                             android:layout_width="330px"
                             android:layout_height="120px"
-                            android:background="@drawable/learning_ability" />
+                            android:background="@mipmap/xingye" />
 
                         <TextView
-                            android:id="@+id/learnint_text2"
+                            android:id="@+id/hangye"
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="20px"
                             android:gravity="center"
-                            android:text="学本领"
+                            android:text="行业标准"
                             android:textColor="@color/colorWhite"
                             android:textSize="35px" />
 
                         <TextView
                             android:layout_width="330px"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/learnint_text2"
+                            android:layout_below="@id/hangye"
                             android:layout_marginLeft="10px"
                             android:layout_marginTop="0px"
                             android:gravity="center"
-                            android:text="LEARNING ABILITY"
+                            android:text="The industry standard"
                             android:textColor="@color/colorWhite"
                             android:textSize="20px" />
                     </RelativeLayout>
-
-
                 </LinearLayout>
-
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
-                    android:layout_weight="1"
+                    android:id="@+id/lair_plumber_and_electrician"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
-                <Button
                     android:layout_weight="1"
+                    android:text="水电工" />
+
+                <Button
+                    android:id="@+id/lair_Welder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
-                <Button
                     android:layout_weight="1"
+                    android:text="焊工" />
+
+                <Button
+                    android:id="@+id/lair_Architect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
-                <Button
                     android:layout_weight="1"
+                    android:text="建筑师" />
+
+                <Button
+                    android:id="@+id/lair_Designer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
+                    android:layout_weight="1"
+                    android:text="设计师" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
-                    android:layout_weight="1"
+                    android:id="@+id/lair_Security_officer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
-                <Button
                     android:layout_weight="1"
+                    android:text="安全员" />
+
+                <Button
+                    android:id="@+id/lair_Bricklayer"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
-                <Button
                     android:layout_weight="1"
+                    android:text="泥瓦工" />
+
+                <Button
+                    android:id="@+id/lair_Machinist"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
-                <Button
                     android:layout_weight="1"
+                    android:text="机械师" />
+
+                <Button
+                    android:id="@+id/lair_More"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1"/>
+                    android:layout_weight="1"
+                    android:text="更多>" />
             </LinearLayout>
+
             <ImageView
-                android:layout_width="750px"
+                android:layout_width="match_parent"
                 android:layout_height="140px"
-                android:src="@drawable/shipin"
-                android:layout_marginTop="20px"
                 android:layout_marginBottom="20px"
-                />
+                android:layout_marginTop="20px"
+                android:src="@mipmap/zhitongdaohe" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:background="@color/colorWhite"
-                >
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="20px"
                     android:layout_height="12px"
-                    android:background="@drawable/xing"
                     android:layout_marginTop="30px"
-                    />
+                    android:background="@drawable/xing" />
+
                 <TextView
-                    android:id="@+id/jingpin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="35px"
+                    android:padding="20px"
                     android:text="在招项目"
-                    android:textSize="36px"
-                    android:layout_marginLeft="35px"
-                    android:padding="20px"
-                    />
-            </LinearLayout>
-            <android.support.v7.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@color/colorWhite"
-                >
-                <ImageView
-                    android:layout_width="20px"
-                    android:layout_height="12px"
-                    android:background="@drawable/xing"
-                    android:layout_marginTop="30px"
-                    />
-                <TextView
-                    android:id="@+id/jingpin"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="为你推荐"
-                    android:textSize="36px"
-                    android:layout_marginLeft="35px"
-                    android:padding="20px"
-                    />
+                    android:textSize="36px" />
             </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
+                android:id="@+id/lair_zaizhao_rv"
+                android:layout_marginTop="20px"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal"
+                android:layout_marginTop="20px"
+                >
+
+                <ImageView
+                    android:layout_width="20px"
+                    android:layout_height="12px"
+                    android:layout_marginTop="30px"
+                    android:background="@drawable/xing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35px"
+                    android:padding="20px"
+                    android:text="为你推荐"
+                    android:textSize="36px" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/lair_tuijian_rv"
+                android:layout_marginTop="20px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
 
         </LinearLayout>

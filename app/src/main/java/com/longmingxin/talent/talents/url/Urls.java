@@ -1,7 +1,8 @@
 package com.longmingxin.talent.talents.url;
 
 /**
- * Created by 77 on 2018/5/16.
+ * Created by ASUS on 2018/9/26.
+ *
  */
 
 public class Urls  {

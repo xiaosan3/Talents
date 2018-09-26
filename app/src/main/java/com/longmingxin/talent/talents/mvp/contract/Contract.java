@@ -7,7 +7,8 @@ import com.longmingxin.talent.talents.base.BasePresenter;
 import com.longmingxin.talent.talents.bean.Business;
 
 /**
- * Created by 77 on 2018/5/16.
+ * Created by ASUS on 2018/9/26.
+ *
  */
 
 public interface Contract {

@@ -55,6 +55,13 @@
         <activity android:name=".foundwork.ui.activity.PostInformationActivity" />
         <activity android:name=".foundwork.ui.activity.EnterpriseReviewActivity" />
         <activity android:name=".foundwork.ui.activity.EnterpriseInformationActivity"></activity>
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.BackgroundActivity" />
+        <activity android:name=".ui.newactivity.Train_SchoolActivity" />
+        <activity android:name=".ui.newactivity.lair.High_salary_postActivity" />
+        <activity android:name=".ui.newactivity.lair.Intelligent_recommendationActivity" />
+        <activity android:name=".ui.newactivity.lair.Urgent_jobActivity" />
+        <activity android:name=".ui.newactivity.lair.Exclusive_channelActivity" />
+        <activity android:name=".ui.newactivity.lair.XiangQingActivity"></activity>
     </application>
 
 </manifest>
