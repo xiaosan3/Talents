@@ -7,154 +7,35 @@
     android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.newactivity.TrainActivity">
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="128px"
+        android:background="@color/colorRed">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="128px"
-                android:background="@color/colorRed">
+        <ImageView
+            android:id="@+id/train_return_button"
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/return_button" />
 
-                <ImageView
-                    android:id="@+id/train_return_button"
-                    android:layout_width="30px"
-                    android:layout_height="40px"
-                    android:layout_marginLeft="10px"
-                    android:layout_marginTop="40px"
-                    android:background="@drawable/return_button"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40px"
+            android:text="培训机构"
+            android:textColor="@color/colorWhite"
+            android:textSize="40px" />
+    </RelativeLayout>
 
-                    />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/train_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="40px"
-                    android:text="培训机构"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="40px" />
-            </RelativeLayout>
 
-            <ImageView
-                android:id="@+id/train_image"
-                android:layout_width="match_parent"
-                android:layout_height="300px"
-                android:background="@drawable/login_bg" />
-
-            <RelativeLayout
-                android:id="@+id/my_zuzhi"
-                android:layout_width="match_parent"
-                android:layout_height="200px"
-                android:background="#ffffff">
-
-                <TextView
-                    android:id="@+id/train_School_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="90px"
-                    android:layout_marginTop="30px"
-                    android:text="四川蒙吉培训英才学校"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="40px" />
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="match_parent"
-                    android:layout_height="1px"
-                    android:layout_below="@id/train_School_name"
-                    android:layout_marginLeft="20px"
-                    android:layout_marginRight="20px"
-                    android:layout_marginTop="30px"
-                    android:background="@color/colorGray" />
-
-                <ImageView
-                    android:id="@+id/tarin_Location_map"
-                    android:layout_width="40px"
-                    android:layout_height="40px"
-                    android:layout_below="@id/view"
-                    android:layout_marginLeft="90px"
-                    android:layout_marginTop="30px"
-                    android:src="@drawable/dingwei" />
-
-                <TextView
-                    android:id="@+id/train_School_address"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/view"
-                    android:layout_marginLeft="10px"
-                    android:layout_marginTop="30px"
-                    android:layout_toRightOf="@id/tarin_Location_map"
-                    android:text="四川蒙吉培训英才学校菜园子46号"
-                    android:textSize="30px" />
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20px"
-                android:background="@color/colorWhite"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="20px"
-                    android:layout_height="12px"
-                    android:layout_marginTop="30px"
-                    android:background="@drawable/xing" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5px"
-                    android:padding="20px"
-                    android:text="学校简介"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="36px" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/train_School_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"
-                android:padding="15px"
-                android:text="为了中国的伟大发展，我们必须向前看，因为这关乎着整个国家的生死存亡"
-                android:textSize="32px" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20px"
-                android:background="@color/colorWhite"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="20px"
-                    android:layout_height="12px"
-                    android:layout_marginTop="30px"
-                    android:background="@drawable/xing" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5px"
-                    android:padding="20px"
-                    android:text="特色专业"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="36px" />
-
-            </LinearLayout>
-
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/train_RecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/colorWhite"></android.support.v7.widget.RecyclerView>
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

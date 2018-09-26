@@ -1,10 +1,10 @@
 package com.longmingxin.talent.talents.ui.newactivity;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
@@ -14,18 +14,13 @@ import com.longmingxin.talent.talents.ui.adapter.Train_SubAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainActivity extends BaseActivity implements View.OnClickListener{
+public class TrainActivity extends BaseActivity implements View.OnClickListener {
 
 
     private ImageView train_return_button;
-    private ImageView train_image;
-    private TextView train_School_name;
-    private ImageView tarin_Location_map;
-    private TextView train_School_address;
-    private TextView train_School_content;
     private RecyclerView train_RecyclerView;
-    private List<Train_Data> mlist = new ArrayList<>();
     private Train_SubAdapter adapter;
+    private List<Train_Data> mlist = new ArrayList<>();
 
     @Override
     protected int getContentView() {
@@ -35,27 +30,28 @@ public class TrainActivity extends BaseActivity implements View.OnClickListener{
     @Override
     protected void initView() {
         train_return_button = (ImageView) findViewById(R.id.train_return_button);
-        train_image = (ImageView) findViewById(R.id.train_image);
-        train_School_name = (TextView) findViewById(R.id.train_School_name);
-        tarin_Location_map = (ImageView) findViewById(R.id.tarin_Location_map);
-        train_School_address = (TextView) findViewById(R.id.train_School_address);
-        train_School_content = (TextView) findViewById(R.id.train_School_content);
-        train_RecyclerView = (RecyclerView) findViewById(R.id.train_RecyclerView);
-
         train_return_button.setOnClickListener(this);
-
-        adapter = new Train_SubAdapter(R.layout.train_item,mlist);
+        train_RecyclerView = (RecyclerView) findViewById(R.id.train_RecyclerView);
+        adapter = new Train_SubAdapter(R.layout.train_layout, mlist);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         train_RecyclerView.setLayoutManager(layoutManager);
         train_RecyclerView.setAdapter(adapter);
+        adapter.setOnclick(new Train_SubAdapter.Onclick() {
+            @Override
+            public void onclicks(View v, int option) {
+                startActivity(new Intent(TrainActivity.this,Train_SchoolActivity.class));
+            }
+        });
+
     }
 
     @Override
     protected void initData() {
+
         mlist.clear();
-        for (int i = 0; i < 10 ; i++) {
-            Train_Data train_data = new Train_Data("焊工", "￥6000", "10560人报名", "2336");
-            mlist.add(train_data);
+        for (int i = 0; i < 10; i++) {
+            Train_Data trainData = new Train_Data("四川华西职业培训学校", "1537", "9500", "导游： (景区讲解员)  钢筋工");
+            mlist.add(trainData);
         }
         adapter.notifyDataSetChanged();
     }
@@ -68,10 +64,12 @@ public class TrainActivity extends BaseActivity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.train_RecyclerView:
+            case R.id.train_return_button:
                 finish();
                 break;
         }
 
     }
+
+
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_intelligent_recommendation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.longmingxin.talent.talents.ui.newactivity.lair.Intelligent_recommendationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="128px"
+        android:background="@color/colorRed">
+
+        <ImageView
+            android:id="@+id/course_return_button"
+            android:layout_width="30px"
+            android:layout_height="40px"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="40px"
+            android:background="@drawable/return_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40px"
+            android:text="智能推荐"
+            android:textColor="@color/colorWhite"
+            android:textSize="40px" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="@drawable/zhinengtuijian"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="40px"
+            android:text="完善找工作名片，让招工方主动联系你"
+            android:textColor="@color/colorZhiNengTuiJian"
+            android:textSize="30px" />
+
+        <RelativeLayout
+            android:id="@+id/course_QuanBu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="30px">
+
+            <ImageView
+                android:layout_width="120px"
+                android:layout_height="60px"
+                android:background="@drawable/entity_frame" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="去完善"
+                android:textColor="@color/colorWhite"
+                android:textSize="24px" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

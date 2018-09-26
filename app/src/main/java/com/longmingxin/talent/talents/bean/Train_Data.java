@@ -4,61 +4,61 @@ package com.longmingxin.talent.talents.bean;
  * Created by ASUS on 2018/9/25.
  */
 
-public class Train_Data {
-    private String train_Welder;
-    private String train_price;
-    private String train_sign_up;
-    private String train_tuijianruzhi;
+public class Train_Data  {
+    private String train_SchoolName;
+    private String train_RuXue;
+    private String train_TuiJianRenShu;
+    private String train_TeSe;
 
     public Train_Data() {
     }
 
-    public Train_Data(String train_Welder, String train_price, String train_sign_up, String train_tuijianruzhi) {
-        this.train_Welder = train_Welder;
-        this.train_price = train_price;
-        this.train_sign_up = train_sign_up;
-        this.train_tuijianruzhi = train_tuijianruzhi;
+    public Train_Data(String train_SchoolName, String train_RuXue, String train_TuiJianRenShu, String train_TeSe) {
+        this.train_SchoolName = train_SchoolName;
+        this.train_RuXue = train_RuXue;
+        this.train_TuiJianRenShu = train_TuiJianRenShu;
+        this.train_TeSe = train_TeSe;
     }
 
-    public String getTrain_Welder() {
-        return train_Welder;
+    public String getTrain_SchoolName() {
+        return train_SchoolName;
     }
 
-    public void setTrain_Welder(String train_Welder) {
-        this.train_Welder = train_Welder;
+    public void setTrain_SchoolName(String train_SchoolName) {
+        this.train_SchoolName = train_SchoolName;
     }
 
-    public String getTrain_price() {
-        return train_price;
+    public String getTrain_RuXue() {
+        return train_RuXue;
     }
 
-    public void setTrain_price(String train_price) {
-        this.train_price = train_price;
+    public void setTrain_RuXue(String train_RuXue) {
+        this.train_RuXue = train_RuXue;
     }
 
-    public String getTrain_sign_up() {
-        return train_sign_up;
+    public String getTrain_TuiJianRenShu() {
+        return train_TuiJianRenShu;
     }
 
-    public void setTrain_sign_up(String train_sign_up) {
-        this.train_sign_up = train_sign_up;
+    public void setTrain_TuiJianRenShu(String train_TuiJianRenShu) {
+        this.train_TuiJianRenShu = train_TuiJianRenShu;
     }
 
-    public String getTrain_tuijianruzhi() {
-        return train_tuijianruzhi;
+    public String getTrain_TeSe() {
+        return train_TeSe;
     }
 
-    public void setTrain_tuijianruzhi(String train_tuijianruzhi) {
-        this.train_tuijianruzhi = train_tuijianruzhi;
+    public void setTrain_TeSe(String train_TeSe) {
+        this.train_TeSe = train_TeSe;
     }
 
     @Override
     public String toString() {
         return "Train_Data{" +
-                "train_Welder='" + train_Welder + '\'' +
-                ", train_price='" + train_price + '\'' +
-                ", train_sign_up='" + train_sign_up + '\'' +
-                ", train_tuijianruzhi='" + train_tuijianruzhi + '\'' +
+                "train_SchoolName='" + train_SchoolName + '\'' +
+                ", train_RuXue='" + train_RuXue + '\'' +
+                ", train_TuiJianRenShu='" + train_TuiJianRenShu + '\'' +
+                ", train_TeSe='" + train_TeSe + '\'' +
                 '}';
     }
 }

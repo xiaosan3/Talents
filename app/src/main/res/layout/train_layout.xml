@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/train_image"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:background="@drawable/login_bg" />
+    <RelativeLayout
+        android:id="@+id/train_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300px"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:layout_marginTop="20px"
+        >
+        <TextView
+            android:id="@+id/train_SchoolName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="四川华西职业培训学校"
+            android:layout_marginLeft="30px"
+            android:textSize="36px"
+            android:textColor="@color/colorBlack"
+            />
+        <RelativeLayout
+            android:layout_below="@+id/train_SchoolName"
+            android:id="@+id/train_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px">
+
+            <ImageView
+                android:layout_width="160px"
+                android:layout_height="60px"
+                android:background="@drawable/square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="师资力量强"
+                android:textColor="@color/colorRed"
+                android:textSize="24px" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/train_rl_two"
+            android:layout_below="@id/train_SchoolName"
+            android:layout_toRightOf="@id/train_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px">
+
+            <ImageView
+                android:layout_width="140px"
+                android:layout_height="60px"
+                android:background="@drawable/square" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25px"
+                android:layout_marginTop="15px"
+                android:text="环境优美"
+                android:textColor="@color/colorRed"
+                android:textSize="24px" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/train_rl_three"
+            android:layout_below="@+id/train_rl_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:layout_marginLeft="30px"
+
+            >
+            <TextView
+                android:id="@+id/train_RuXue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1537"
+                android:textColor="@color/colorRed"
+                android:textSize="30px"
+                />
+            <TextView
+                android:layout_toRightOf="@id/train_RuXue"
+                android:id="@+id/train_renshu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人入学"
+                android:layout_marginLeft="10px"
+                android:textSize="30px"
+
+                />
+            <View
+                android:id="@+id/train_view"
+                android:layout_width="2px"
+                android:layout_height="40px"
+                android:layout_toRightOf="@id/train_renshu"
+                android:background="@color/colorGray"
+                android:layout_marginLeft="20px"
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/train_view"
+                android:id="@+id/train_RenShu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐"
+                android:layout_marginLeft="20px"
+                android:textSize="30px"
+                />
+            <TextView
+                android:id="@+id/train_TuiJianRenShu"
+                android:layout_toRightOf="@id/train_RenShu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9500"
+                android:textColor="#37c0b2"
+                android:layout_marginLeft="10px"
+                android:textSize="30px"
+                />
+            <TextView
+                android:layout_toRightOf="@id/train_TuiJianRenShu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人入职"
+                android:layout_marginLeft="10px"
+                android:textSize="30px"
+                />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/train_JunJia"
+            android:layout_width="208px"
+            android:layout_height="80px"
+            android:background="@mipmap/tixing"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="170px"
+            />
+        <RelativeLayout
+            android:layout_below="@+id/train_rl_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_marginLeft="30px"
+            >
+
+            <TextView
+                android:id="@+id/train_tese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30px"
+                android:text="特色专业"
+
+                />
+
+            <TextView
+                android:layout_toRightOf="@id/train_tese"
+                android:id="@+id/train_TeSe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导游： (景区讲解员)  钢筋工"
+                android:textSize="30px"
+                android:textColor="@color/colorRed"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

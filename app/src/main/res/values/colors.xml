@@ -9,4 +9,6 @@
     <color name="colorRegister">#ececec</color>
     <color name="colorYin">#333333</color>
     <color name="colorBlack">#333333</color>
+    <color name="colorZhiNeng">#fee8cd</color>
+    <color name="colorZhiNengTuiJian">#f39035</color>
 </resources>

@@ -11,11 +11,10 @@ import com.longmingxin.talent.talents.bean.Course_Data;
 import java.util.List;
 
 /**
- * Created by ASUS on 2018/9/25.
+ * Created by ASUS on 2018/9/26.
  */
 
 public class Course_SubAdapter extends BaseQuickAdapter<Course_Data, BaseViewHolder> {
-
     public Course_SubAdapter(@LayoutRes int layoutResId, @Nullable List<Course_Data> data) {
         super(layoutResId, data);
     }
@@ -27,6 +26,5 @@ public class Course_SubAdapter extends BaseQuickAdapter<Course_Data, BaseViewHol
                 .setText(R.id.course_content,item.getCourse_content())
                 .setText(R.id.course_BaoMing,item.getCourse_BaoMing())
                 .setText(R.id.course_RenShu,item.getCourse_RenShu());
-
     }
 }

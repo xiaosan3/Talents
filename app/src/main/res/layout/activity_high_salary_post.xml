@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_course"
+    android:id="@+id/activity_high_salary_post"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context="com.longmingxin.talent.talents.ui.newactivity.lair.High_salary_postActivity"
     android:orientation="vertical"
-    tools:context="com.longmingxin.talent.talents.ui.newactivity.CourseActivity">
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,25 +20,22 @@
             android:layout_marginLeft="10px"
             android:layout_marginTop="40px"
             android:background="@drawable/return_button"
-
             />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_gravity="center"
             android:layout_marginTop="40px"
-            android:text="在线课程"
+            android:text="高薪岗位"
             android:textColor="@color/colorWhite"
             android:textSize="40px" />
 
     </RelativeLayout>
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="130px"
-        android:background="@color/colorWhite"
+        android:background="#ffffff"
         >
         <RelativeLayout
             android:id="@+id/course_QuanBu"
@@ -57,7 +55,7 @@
                 android:layout_marginLeft="25px"
                 android:layout_marginTop="15px"
                 android:text="全部"
-                android:textColor="@color/colorWhite"
+                android:textColor="#ffffff"
                 android:textSize="24px" />
         </RelativeLayout>
 
@@ -65,22 +63,22 @@
             android:id="@+id/course_WeiXiu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
+            android:layout_marginLeft="10px"
             android:layout_marginTop="30px"
             android:layout_toRightOf="@id/course_QuanBu">
 
             <ImageView
-                android:layout_width="100px"
+                android:layout_width="126px"
                 android:layout_height="60px"
-                android:background="@drawable/square" />
+                android:background="@drawable/transparent_frame" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25px"
                 android:layout_marginTop="15px"
-                android:text="维修"
-                android:textColor="@color/colorRed"
+                android:text="6k - 10k "
+                android:textColor="@color/colorGray"
                 android:textSize="24px" />
         </RelativeLayout>
 
@@ -88,22 +86,22 @@
             android:id="@+id/course_DianNao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
+            android:layout_marginLeft="10px"
             android:layout_marginTop="30px"
             android:layout_toRightOf="@id/course_WeiXiu">
 
             <ImageView
-                android:layout_width="100px"
+                android:layout_width="146px"
                 android:layout_height="60px"
-                android:background="@drawable/square" />
+                android:background="@drawable/transparent_frame" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25px"
                 android:layout_marginTop="15px"
-                android:text="电脑"
-                android:textColor="@color/colorRed"
+                android:text=" 6K - 15K"
+                android:textColor="@color/colorGray"
                 android:textSize="24px" />
         </RelativeLayout>
 
@@ -111,22 +109,22 @@
             android:id="@+id/course_ShuJu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
+            android:layout_marginLeft="10px"
             android:layout_marginTop="30px"
             android:layout_toRightOf="@id/course_DianNao">
 
             <ImageView
-                android:layout_width="100px"
+                android:layout_width="146px"
                 android:layout_height="60px"
-                android:background="@drawable/square" />
+                android:background="@drawable/transparent_frame" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25px"
                 android:layout_marginTop="15px"
-                android:text="数据"
-                android:textColor="@color/colorRed"
+                android:text="15K - 20K"
+                android:textColor="@color/colorGray"
                 android:textSize="24px" />
         </RelativeLayout>
 
@@ -134,30 +132,30 @@
             android:id="@+id/course_QiChe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50px"
+            android:layout_marginLeft="10px"
             android:layout_marginTop="30px"
             android:layout_toRightOf="@id/course_ShuJu">
 
             <ImageView
-                android:layout_width="100px"
+                android:layout_width="126px"
                 android:layout_height="60px"
-                android:background="@drawable/square" />
+                android:background="@drawable/transparent_frame" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25px"
                 android:layout_marginTop="15px"
-                android:text="汽车"
-                android:textColor="@color/colorRed"
+                android:text="20K以上"
+                android:textColor="@color/colorGray"
                 android:textSize="24px" />
         </RelativeLayout>
     </RelativeLayout>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/course_RecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20px"
-        android:background="@color/colorWhite"></android.support.v7.widget.RecyclerView>
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
 </LinearLayout>

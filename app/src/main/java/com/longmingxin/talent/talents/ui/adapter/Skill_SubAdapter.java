@@ -1,6 +1,5 @@
 package com.longmingxin.talent.talents.ui.adapter;
 
-import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.view.View;
@@ -19,9 +18,7 @@ import java.util.List;
  */
 
 public class Skill_SubAdapter extends BaseQuickAdapter<Skill_Data,BaseViewHolder> {
-    private Context context;
-    public     Onclick onclick;
-
+    public  Onclick onclick;
     public void setOnclick(Onclick onclick) {
         this.onclick = onclick;
     }
