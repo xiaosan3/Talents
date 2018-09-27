@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/curriculum_item_video"
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:src="@mipmap/video" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/curriculum_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38px"
+            android:text="工业机器人入门实用课程"
+            android:textColor="#000000"
+            android:textSize="30px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32px">
+
+            <TextView
+                android:id="@+id/curriculum_item_class_hour"
+                android:layout_width="120px"
+                android:layout_height="36px"
+                android:background="@mipmap/rounded_rectangle"
+                android:gravity="center"
+                android:text="课时：7"
+                android:textColor="#ffffff"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/curriculum_item_videtype"
+                android:layout_width="80px"
+                android:layout_height="36px"
+                android:layout_marginLeft="30px"
+                android:background="@mipmap/rounded_rectangle_transparent"
+                android:gravity="center"
+                android:text="视频"
+                android:textColor="@color/colorRed"
+                android:textSize="30px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/curriculum_item_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36px"
+            android:gravity="center"
+            android:text="课程完成度：28%"
+            android:textColor="@color/colorRed"
+            android:textSize="30px" />
+    </LinearLayout>
+
+</LinearLayout>

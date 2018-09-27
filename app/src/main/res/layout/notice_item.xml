@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="690px"
+        android:layout_height="260px"
+        android:layout_marginTop="30px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notice_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:text="继续吃鸡，最高获120元话费"
+            android:textColor="#000000"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/notice_item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:text="本周吃鸡游戏继续！"
+            android:textColor="#999999"
+            android:textSize="24px" />
+
+        <RelativeLayout
+            android:id="@+id/notice_item_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本周吃鸡游戏继续！"
+                android:textColor="#999999"
+                android:textSize="28px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20px"
+                android:src="@drawable/xiala_image" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
