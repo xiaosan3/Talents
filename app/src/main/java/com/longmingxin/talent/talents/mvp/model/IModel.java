@@ -7,8 +7,10 @@ import com.longmingxin.talent.talents.bean.Property;
 import com.longmingxin.talent.talents.url.Urls;
 
 import io.reactivex.Observable;
+import okhttp3.ResponseBody;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 
@@ -23,6 +25,10 @@ public interface IModel {
     @FormUrlEncoded
     @POST(Urls.REGISTER)
     Observable<Login> getLogin(@Header("Content-Type") String Content_Type, @Field("userName") String userName, @Field("password") String password, @Field("confirmPassword") String confirmPassword, @Field("countryCode") String countryCode, @Field("nickName") String nickName, @Field("code") String code, @Field("type") String type, @Field("payPassword") String payPassword, @Field("confirmPayPassword") String confirmPayPassword);
+
+    //发送验证码
+    @GET(Urls.SEND_CODE)
+    Observable<ResponseBody> getVerification_Code();
 
     //登录
     @FormUrlEncoded

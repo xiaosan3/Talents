@@ -12,6 +12,20 @@ import com.longmingxin.talent.talents.bean.Business;
  */
 
 public interface Contract {
+
+    //获取验证码
+    public interface IsetCodePresenter extends BasePresenter<ISetCodeView>{
+        void setCode();
+    }
+    public interface ISetCodeView{
+
+        void showMessage();
+
+        void showCode();
+
+        void showIntent();
+    }
+
     //注册第一步
     public interface IsetRegisterPresenter extends BasePresenter<IGetRegisterView> {
 
