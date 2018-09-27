@@ -45,7 +45,7 @@
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyCurriculumActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyOrderActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyFollowActivity" />
-        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyNewsActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.news.MyNewsActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyTeamActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyAboutActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MySettingActivity" />
@@ -57,7 +57,8 @@
         <activity android:name=".ui.newactivity.lair.Intelligent_recommendationActivity" />
         <activity android:name=".ui.newactivity.lair.Urgent_jobActivity" />
         <activity android:name=".ui.newactivity.lair.Exclusive_channelActivity" />
-        <activity android:name=".ui.newactivity.lair.XiangQingActivity"></activity>
+        <activity android:name=".ui.newactivity.lair.XiangQingActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.news.NoticeActivity"></activity>
     </application>
 
 </manifest>

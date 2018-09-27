@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="40px">
+
+        <TextView
+            android:id="@+id/records_item_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android 开发"
+            android:textColor="#000000"
+            android:textSize="32px" />
+
+        <TextView
+            android:id="@+id/records_item_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:text="20K"
+            android:textColor="@color/colorRed"
+            android:textSize="32px" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/records_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="30px"
+        android:textColor="#999999"
+        android:text="360科技北京中关村有限公司" />
+</LinearLayout>
