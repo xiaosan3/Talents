@@ -42,6 +42,7 @@ public class MySettingActivity extends BaseActivity implements View.OnClickListe
     @Override
     protected void initView() {
 
+        //
         setting_toolbar = (Toolbar) findViewById(R.id.setting_toolbar);
         setting_phone_text = (TextView) findViewById(R.id.setting_phone_text);
         setting_weixin_text = (TextView) findViewById(R.id.setting_weixin_text);
