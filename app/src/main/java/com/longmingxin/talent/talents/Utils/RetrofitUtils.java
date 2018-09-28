@@ -1,7 +1,7 @@
 package com.longmingxin.talent.talents.Utils;
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
-import com.longmingxin.talent.talents.mvp.model.IModel;
+import com.longmingxin.talent.talents.net.CodeLoginApiService;
 import com.longmingxin.talent.talents.url.Urls;
 
 import okhttp3.OkHttpClient;
@@ -14,9 +14,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitUtils {
-    private static IModel iRetorfitModel;
+    private static CodeLoginApiService iRetorfitModel;
 
-    private IModel RetrofitUtilss() {
+    private CodeLoginApiService RetrofitUtilss() {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .build();
@@ -36,13 +36,13 @@ public class RetrofitUtils {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(okHttpClient)
                 .build()
-                .create(IModel.class);
+                .create(CodeLoginApiService.class);
 
     }
 
 
     //用单一实例来调用这个方法
-    public static IModel getInstance() {
+    public static CodeLoginApiService getInstance() {
         if (iRetorfitModel == null) {
             iRetorfitModel = new RetrofitUtils().RetrofitUtilss();
         }

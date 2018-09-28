@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_group"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.team.MyGroupActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/group_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="团队组员"
+            android:textColor="#ffffff"
+            android:textSize="40px" />
+
+        <ImageView
+            android:id="@+id/group_add_group"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_gravity="end"
+            android:layout_marginRight="50px"
+            android:src="@mipmap/add_person" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50px"
+        android:layout_marginTop="50px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="576px"
+            android:layout_height="62px"
+            android:layout_marginLeft="10px"
+            android:background="@drawable/group_search">
+
+            <EditText
+                android:id="@+id/group_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20px"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_image"
+                android:hint="搜索"
+                android:textSize="28px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50px">
+
+            <TextView
+                android:id="@+id/group_projectname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="龙湖山庄项目组"
+                android:textColor="@color/colorRed"
+                android:textSize="26px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">"
+                android:textColor="#000000"
+                android:textSize="26px" />
+
+            <TextView
+                android:id="@+id/group_groupname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="木工组"
+                android:textColor="#000000"
+                android:textSize="26px" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/group_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50px"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+</LinearLayout>

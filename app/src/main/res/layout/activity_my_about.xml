@@ -1,13 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_my_about"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyAboutActivity">
 
-</RelativeLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/about_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="关于龙明鑫"
+            android:textColor="#ffffff"
+            android:textSize="40px" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400px">
+
+        <ImageView
+            android:id="@+id/about_backgrount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/about_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38px"
+            android:background="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="181px"
+            android:gravity="center"
+            android:text="江苏龙明鑫集团公司"
+            android:textColor="#FFFFFFFF"
+            android:textSize="31px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="235px"
+            android:gravity="center"
+            android:text="服务热线：0531-8888888"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="280px"
+            android:gravity="center"
+            android:text="公司地址：青岛市市北区中心大厦"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24px" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50px"
+        android:text="        龙明鑫招工榜是专注于建产业人的互联网服务平台,是国内专业的蓝领服务供应商。依托公司在服务外包行业多年的耕耘及结合线下服务，实现建筑产业人培训、考核、入职，打造新型真实、高效快捷的求职直通车，为广大蓝领工人提供方便快捷的服务。"
+        android:textColor="#999999"
+        android:textSize="28px" />
+</LinearLayout>

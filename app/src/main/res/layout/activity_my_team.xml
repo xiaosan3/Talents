@@ -1,13 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_my_team"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyTeamActivity">
+    android:orientation="vertical"
+    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.team.MyTeamActivity">
 
-</RelativeLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/team_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我的团队"
+            android:textColor="#ffffff"
+            android:textSize="40px" />
+
+        <ImageView
+            android:id="@+id/team_add"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_gravity="end"
+            android:layout_marginRight="50px"
+            android:src="@mipmap/add" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="88px"
+            android:layout_height="88px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px"
+            android:src="@mipmap/carpentry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150px"
+            android:text="龙湖山庄项目组"
+            android:textColor="#000000"
+            android:textSize="30px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="120px"
+            android:src="@mipmap/communicate" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:text="沟通"
+            android:textColor="#4668FD"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team_carpentry_clike"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:src="@mipmap/carpentry" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150px"
+            android:text="木工组"
+            android:textColor="#000000"
+            android:textSize="26px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:src="@drawable/xiala_image" />
+
+        <TextView
+            android:id="@+id/team_carpentry_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="75px"
+            android:text="5人"
+            android:textColor="#999999"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team_tile_worker_clike"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:src="@mipmap/tile_worker" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150px"
+            android:text="瓦工组"
+            android:textColor="#000000"
+            android:textSize="26px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:src="@drawable/xiala_image" />
+
+        <TextView
+            android:id="@+id/team_tile_worker_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="75px"
+            android:text="5人"
+            android:textColor="#999999"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team_rebar_worker_clike"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:src="@mipmap/rebar_worker" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150px"
+            android:text="钢筋工组"
+            android:textColor="#000000"
+            android:textSize="26px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:src="@drawable/xiala_image" />
+
+        <TextView
+            android:id="@+id/team_rebar_worker_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="75px"
+            android:text="5人"
+            android:textColor="#999999"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/team_plumber_and_electrician_clike"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:src="@mipmap/plumber_and_electrician" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150px"
+            android:text="水电工组"
+            android:textColor="#000000"
+            android:textSize="26px" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="50px"
+            android:src="@drawable/xiala_image" />
+
+        <TextView
+            android:id="@+id/team_plumber_and_electrician_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="75px"
+            android:text="5人"
+            android:textColor="#999999"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff">
+
+        <ImageView
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:src="@mipmap/create_new_group" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="150px"
+            android:text="创建新组"
+            android:textColor="#000000"
+            android:textSize="30px" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:text="常用联系人"
+            android:textColor="#000000"
+            android:textSize="30px" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/team_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -16,10 +16,10 @@ import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.Intervi
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyAboutActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyCurriculumActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyFollowActivity;
-import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyNewsActivity;
+import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.news.MyNewsActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyOrderActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MySettingActivity;
-import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyTeamActivity;
+import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.team.MyTeamActivity;
 
 /**
  * A simple {@link Fragment} subclass.
