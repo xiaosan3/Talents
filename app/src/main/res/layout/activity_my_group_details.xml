@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_my_setting"
+    android:id="@+id/activity_my_group_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:baselineAligned="false"
     android:orientation="vertical"
-    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MySettingActivity">
+    tools:context="com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.team.MyGroupDetailsActivity">
 
     <android.support.v7.widget.Toolbar
-        android:id="@+id/setting_toolbar"
+        android:id="@+id/details_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorRed">
@@ -18,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="设置"
+            android:text="组员信息"
             android:textColor="#ffffff"
             android:textSize="40px" />
     </android.support.v7.widget.Toolbar>
@@ -40,101 +39,206 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="手机号"
+                android:text="姓名"
                 android:textColor="#000000"
                 android:textSize="30px" />
 
             <TextView
-                android:id="@+id/setting_phone_text"
+                android:id="@+id/details_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140px"
+                android:text="eaglar006"
+                android:textColor="#000000"
+                android:textSize="28px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xiala_image" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="电话"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/details_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140px"
+                android:text="17785461235"
+                android:textColor="#000000"
+                android:textSize="28px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="职位"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140px"
+                android:text="选填"
+                android:textColor="#999999"
+                android:textSize="28px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="部门"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="35px"
-                android:text="18510410068"
+                android:text="经理室 信息技术部"
                 android:textColor="#999999"
                 android:textSize="28px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xiala_image" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="工号"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140px"
+                android:text="选填"
+                android:textColor="#999999"
+                android:textSize="28px" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="入队日期"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/xiala_image" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginTop="20px"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="备注"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140px"
+                android:text="选填"
+                android:textColor="#999999"
+                android:textSize="28px" />
+
         </RelativeLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="手机号暂不支持更新绑定"
+            android:text="高级设置"
             android:textColor="#999999"
             android:textSize="28px" />
 
         <RelativeLayout
-            android:id="@+id/setting_weixin_clike"
-            android:layout_width="match_parent"
-            android:layout_height="80px"
-            android:background="#ffffff">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/xiala_image" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="微信号"
-                android:textColor="#000000"
-                android:textSize="30px" />
-
-            <TextView
-                android:id="@+id/setting_weixin_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="35px"
-                android:text="未绑定"
-                android:textColor="#999999"
-                android:textSize="28px" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/setting_qq_clike"
             android:layout_width="match_parent"
             android:layout_height="80px"
             android:layout_marginTop="20px"
             android:background="#ffffff">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/xiala_image" />
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="QQ号"
+                android:text="号码隐藏"
                 android:textColor="#000000"
                 android:textSize="30px" />
-
-            <TextView
-                android:id="@+id/setting_qq_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="35px"
-                android:text="未绑定"
-                android:textColor="#999999"
-                android:textSize="28px" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="80px"
-            android:layout_marginTop="20px"
-            android:background="#ffffff">
 
             <CheckBox
                 android:layout_width="wrap_content"
@@ -143,74 +247,8 @@
                 android:layout_centerVertical="true"
                 android:background="@drawable/group_select"
                 android:button="@null" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="2G/3G/4G网络为无图模式"
-                android:textColor="#000000"
-                android:textSize="30px" />
-
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/setting_cache_clike"
-            android:layout_width="match_parent"
-            android:layout_height="80px"
-            android:layout_marginTop="20px"
-            android:background="#ffffff">
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/xiala_image" />
-
-            <TextView
-                android:id="@+id/setting_cache_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="清除缓存"
-                android:textColor="#000000"
-                android:textSize="30px" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="35px"
-                android:text="0B"
-                android:textColor="#999999"
-                android:textSize="28px" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/setting_blacklist_clike"
-            android:layout_width="match_parent"
-            android:layout_height="80px"
-            android:layout_marginTop="20px"
-            android:background="#ffffff">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/xiala_image" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="黑名单"
-                android:textColor="#000000"
-                android:textSize="30px" />
-
-        </RelativeLayout>
     </LinearLayout>
-
 </LinearLayout>

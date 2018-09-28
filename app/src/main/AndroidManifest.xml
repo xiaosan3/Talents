@@ -46,7 +46,7 @@
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyOrderActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyFollowActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.news.MyNewsActivity" />
-        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyTeamActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyTeamActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyAboutActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MySettingActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.My_InformationActivity" />
@@ -58,6 +58,9 @@
         <activity android:name=".ui.newactivity.lair.Urgent_jobActivity" />
         <activity android:name=".ui.newactivity.lair.Exclusive_channelActivity" />
         <activity android:name=".ui.newactivity.lair.XiangQingActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.news.NoticeActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupDetailsActivity"></activity>
         <activity android:name=".ui.register.Register_AgreementActivity" />
         <activity android:name=".ui.login.Login_Account_numberActivity" />
         <!--
