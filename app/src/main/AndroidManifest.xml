@@ -61,6 +61,20 @@
         <activity android:name=".ui.fragments.MyFragment.MyActivity.news.NoticeActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupDetailsActivity"></activity>
+        <activity android:name=".ui.register.Register_AgreementActivity" />
+        <activity android:name=".ui.login.Login_Account_numberActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".ui.newactivity.lair.XiangQingActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.news.NoticeActivity" />
+        <activity android:name=".ui.login.Account_ForgetActivity" />
+        <activity android:name=".ui.login.NewPasswordActivity"></activity>
     </application>
 
 </manifest>

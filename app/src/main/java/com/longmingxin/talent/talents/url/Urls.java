@@ -9,13 +9,13 @@ public class Urls  {
 
     //OTC
 
-    public static final String OTC = "https://otc.coinauc.com/";
+    public static final String OTC = "http://221.225.80.128:8888/";
 
     //极验
     public static final String EXTREME = "https://otc.coinauc.com/api/uc/start/captcha";
 
     //发送验证码
-    public static final String SEND_CODE = "https://otc.coinauc.com/api/uc/sendCode";
+    public static final String SEND_CODE = "sendVerificationSms";
 
     //注册
     public static final String REGISTER = "/api/uc/register";
