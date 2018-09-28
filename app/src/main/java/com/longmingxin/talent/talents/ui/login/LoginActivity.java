@@ -13,10 +13,12 @@ import android.widget.Toast;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
+import com.longmingxin.talent.talents.mvp.contract.Contract;
+import com.longmingxin.talent.talents.mvp.presenter.CodeLoginPresenter;
 import com.longmingxin.talent.talents.ui.activity.MainActivity;
 import com.longmingxin.talent.talents.ui.register.RegisterActivity;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener {
+public class LoginActivity extends BaseActivity implements View.OnClickListener ,Contract.ICodeLoginView<Contract.ICodeLoginPresenter>{
 
     private TextView login_Quick_text;
     private TextView login_Account_text;
@@ -32,6 +34,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private LinearLayout login_Quick;
     private View login_Account_view;
     private LinearLayout login_Account;
+    private Contract.ICodeLoginPresenter iCodeLoginPresenter1;
+    private String phone;
 
 
     @Override
@@ -66,7 +70,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         login_Quick.setOnClickListener(this);
         login_Account = (LinearLayout) findViewById(R.id.login_Account);
         login_Account.setOnClickListener(this);
-
+        new CodeLoginPresenter(this);
 
     }
 
@@ -83,9 +87,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.login_But:
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                break;
             case R.id.login_register:
                 startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
                 break;
@@ -96,11 +97,15 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
             //获取验证码接口
             case R.id.loging_Number_of_seconds:
-                String phone = login_phone.getText().toString();
+                phone = login_phone.getText().toString();
+                iCodeLoginPresenter1.setCode(phone);
                 if (phone.length() != 0) {
                     loging_Number_of_seconds.setText("正在发送..");
                     loging_Number_of_seconds.setTextColor(ContextCompat.getColor(this, R.color.colorGray));
                 }
+                break;
+            case R.id.login_But:
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
                 break;
         }
     }
@@ -125,4 +130,13 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
     }
 
+    @Override
+    public void getCodeLogin() {
+
+    }
+
+    @Override
+    public void setPresenter(Contract.ICodeLoginPresenter iCodeLoginPresenter) {
+        iCodeLoginPresenter1 = iCodeLoginPresenter;
+    }
 }

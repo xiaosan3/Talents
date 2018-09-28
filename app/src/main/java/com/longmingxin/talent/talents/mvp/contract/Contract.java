@@ -1,10 +1,7 @@
 package com.longmingxin.talent.talents.mvp.contract;
 
 
-import android.util.Property;
-
-import com.longmingxin.talent.talents.base.BasePresenter;
-import com.longmingxin.talent.talents.bean.Business;
+import com.longmingxin.talent.talents.base.BaseView;
 
 /**
  * Created by ASUS on 2018/9/26.
@@ -14,93 +11,13 @@ import com.longmingxin.talent.talents.bean.Business;
 public interface Contract {
 
     //获取验证码
-    public interface IsetCodePresenter extends BasePresenter<ISetCodeView>{
-        void setCode();
+    public interface ICodeLoginPresenter {
+        void setCode(String phone);
     }
-    public interface ISetCodeView{
-
-        void showMessage();
-
-        void showCode();
-
-        void showIntent();
+    interface ICodeLoginView<ICodeLoginPresenter>extends BaseView<ICodeLoginPresenter>{
+        void getCodeLogin();
     }
-
-    //注册第一步
-    public interface IsetRegisterPresenter extends BasePresenter<IGetRegisterView> {
-
-        void setRegister();
+    interface ICodeModle{
+        void setCode(String phone);
     }
-
-    public interface IGetRegisterView {
-
-        void showMessage(String message);
-
-        void showRegister();
-
-        void showIntent();
-    }
-
-    //注册第二步
-    public interface IsetMessagePresenter extends BasePresenter<IGetMessageView> {
-
-        void setMessage(String userName, String password, String confirmPassword, String nickName, String code, String payPassword, String confirmPayPassword);
-    }
-
-    public interface IGetMessageView {
-
-        void showMessage(String message);
-
-        void showMessage();
-
-        void showIntent();
-    }
-
-    //登录
-    public interface IsetLoginPresenter extends BasePresenter<IGetLoginView> {
-
-        void setLogin(String userName, String password);
-    }
-
-    public interface IGetLoginView {
-
-        void showMessage(String message);
-
-        //void showLogin(Login login);
-
-        void showIntent();
-    }
-
-    //获取首页数据
-    public interface IsetBusinessPresenter extends BasePresenter<IGetBusinessView> {
-
-        void setBusiness(String advertiseType, String isCertified, String unit, String coinType, String paymentType);
-    }
-
-    public interface IGetBusinessView {
-
-        void showMessage(String message);
-
-        void showBusiness(Business business);
-
-        void showIntent();
-    }
-
-    //获取个人资产
-    public interface IsetPropertyPresenter extends BasePresenter<IGetPropertyView> {
-
-        void setProperty();
-    }
-
-    public interface IGetPropertyView {
-
-        void showMessage(String message);
-
-        void showProperty(Property property);
-
-        void showIntent();
-
-    }
-
-
 }

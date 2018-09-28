@@ -18,7 +18,7 @@ public class Login_Account_numberActivity extends BaseActivity implements View.O
     private EditText account_userName;
     private EditText account_userPassWord;
     private EditText account_userYanZhengMa;
-    private TextView loging_Number_of_seconds;
+    private ImageView loging_Number_of_seconds;
     private Button account_But;
     private TextView account_Forget;
     private TextView account_register;
@@ -37,7 +37,7 @@ public class Login_Account_numberActivity extends BaseActivity implements View.O
         account_userName = (EditText) findViewById(R.id.account_userName);
         account_userPassWord = (EditText) findViewById(R.id.account_userPassWord);
         account_userYanZhengMa = (EditText) findViewById(R.id.account_userYanZhengMa);
-        loging_Number_of_seconds = (TextView) findViewById(R.id.loging_Number_of_seconds);
+        loging_Number_of_seconds = (ImageView) findViewById(R.id.loging_Number_of_seconds);
         account_But = (Button) findViewById(R.id.account_But);
         account_Forget = (TextView) findViewById(R.id.account_Forget);
         account_register = (TextView) findViewById(R.id.account_register);
@@ -46,6 +46,7 @@ public class Login_Account_numberActivity extends BaseActivity implements View.O
         account_QQ = (ImageView) findViewById(R.id.account_QQ);
 
         account_Quick.setOnClickListener(this);
+        account_Forget.setOnClickListener(this);
     }
 
     @Override
@@ -63,7 +64,11 @@ public class Login_Account_numberActivity extends BaseActivity implements View.O
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.account_Quick:
-                startActivity(new Intent(this,Login_Account_numberActivity.class));
+                startActivity(new Intent(this,LoginActivity.class));
+                finish();
+                break;
+            case R.id.account_Forget:
+                startActivity(new Intent(this,Account_ForgetActivity.class));
                 break;
         }
 

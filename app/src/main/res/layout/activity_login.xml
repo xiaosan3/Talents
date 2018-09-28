@@ -104,63 +104,87 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="74px">
+        android:layout_marginTop="80px">
 
         <ImageView
+            android:id="@+id/img_youhu"
             android:layout_width="48px"
             android:layout_height="80px"
             android:layout_marginLeft="104px"
             android:src="@drawable/pone" />
 
         <EditText
+            android:layout_toRightOf="@id/img_youhu"
             android:id="@+id/login_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150px"
+            android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
+            android:layout_marginTop="25px"
             android:hint="请输入手机号"
-            android:textSize="28px" />
+            android:textSize="28px"
+            android:background="@null"
+            />
+        <TextView
+            android:layout_below="@id/img_youhu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginRight="75px"
+            android:background="@drawable/dottedline"
+            android:layerType="software"/>
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24px">
+        android:layout_marginTop="20px">
 
         <ImageView
+            android:id="@+id/img_yanzhengma"
             android:layout_width="48px"
             android:layout_height="80px"
             android:layout_marginLeft="104px"
             android:src="@drawable/yanzhen" />
 
         <EditText
+            android:layout_toRightOf="@id/img_yanzhengma"
             android:id="@+id/login_Yanzhengma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="150px"
+            android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:hint="请输入验证码"
-            android:textSize="28px" />
-
+            android:layout_marginTop="30px"
+            android:hint="验证码"
+            android:textSize="28px"
+            android:background="@null"
+            />
+        <TextView
+            android:layout_below="@id/img_yanzhengma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75px"
+            android:layout_marginRight="75px"
+            android:background="@drawable/dottedline"
+            android:layerType="software"/>
         <View
             android:id="@+id/caurse_view"
             android:layout_width="2px"
             android:layout_height="42px"
-            android:layout_marginLeft="500px"
-            android:layout_marginTop="8px"
+            android:layout_marginLeft="530px"
+            android:layout_marginTop="30px"
             android:background="@color/colorRed" />
 
         <TextView
             android:id="@+id/loging_Number_of_seconds"
             android:layout_width="wrap_content"
             android:layout_height="42px"
-            android:layout_marginLeft="550px"
-            android:layout_marginTop="15px"
-            android:text="验证码获取"
+            android:layout_marginLeft="560px"
+            android:layout_marginTop="35px"
+            android:text="获取验证码"
             android:textColor="@color/colorRed"
             android:textSize="24px" />
     </RelativeLayout>
-
     <Button
         android:id="@+id/login_But"
         android:layout_width="600px"
@@ -218,7 +242,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80px"
+        android:layout_marginTop="60px"
         android:orientation="horizontal">
 
         <ImageView

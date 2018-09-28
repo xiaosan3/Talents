@@ -1,6 +1,5 @@
 package com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity;
 
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -10,8 +9,8 @@ import android.widget.RadioButton;
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.Utils.toolbar.ToolBarUtils;
 import com.longmingxin.talent.talents.base.BaseActivity;
-import com.longmingxin.talent.talents.bean.Curriculum_Data;
-import com.longmingxin.talent.talents.ui.adapter.Curriculum_SubAdapter;
+import com.longmingxin.talent.talents.bean.curriculum_Data;
+import com.longmingxin.talent.talents.ui.adapter.curriculum_SubAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +29,8 @@ public class MyCurriculumActivity extends BaseActivity implements View.OnClickLi
     private RadioButton curriculum_type;
     private RecyclerView curriculum_RecyclerView;
 
-    private List<Curriculum_Data> mlist = new ArrayList<>();
-    private Curriculum_SubAdapter adapter;
+    private List<curriculum_Data> mlist = new ArrayList<>();
+    private curriculum_SubAdapter adapter;
 
     @Override
     protected int getContentView() {
@@ -50,7 +49,7 @@ public class MyCurriculumActivity extends BaseActivity implements View.OnClickLi
         curriculum_RecyclerView = (RecyclerView) findViewById(R.id.curriculum_RecyclerView);
         curriculum_RecyclerView.setOnClickListener(this);
 
-        adapter = new Curriculum_SubAdapter(R.layout.curriculum_item, mlist);
+        adapter = new curriculum_SubAdapter(R.layout.curriculum_item, mlist);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         curriculum_RecyclerView.setLayoutManager(layoutManager);
         curriculum_RecyclerView.setAdapter(adapter);
@@ -60,7 +59,7 @@ public class MyCurriculumActivity extends BaseActivity implements View.OnClickLi
     protected void initData() {
         mlist.clear();
         for (int i = 0; i < 2; i++) {
-            Curriculum_Data curriculum_data = new Curriculum_Data();
+            curriculum_Data curriculum_data = new curriculum_Data();
             mlist.add(curriculum_data);
         }
         adapter.notifyDataSetChanged();

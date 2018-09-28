@@ -9,7 +9,7 @@ public class Urls  {
 
     //OTC
 
-    public static final String OTC = "http://221.225.80.128:8888/lmx/";
+    public static final String OTC = "http://221.225.80.128:8888/";
 
     //极验
     public static final String EXTREME = "https://otc.coinauc.com/api/uc/start/captcha";

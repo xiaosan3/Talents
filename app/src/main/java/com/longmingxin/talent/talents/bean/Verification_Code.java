@@ -5,4 +5,5 @@ package com.longmingxin.talent.talents.bean;
  */
 
 public class Verification_Code {
+
 }
