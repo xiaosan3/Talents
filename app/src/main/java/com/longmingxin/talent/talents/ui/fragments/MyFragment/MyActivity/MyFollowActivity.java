@@ -1,13 +1,14 @@
 package com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity;
 
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.Utils.toolbar.ToolBarUtils;
 import com.longmingxin.talent.talents.base.BaseActivity;
@@ -57,6 +58,12 @@ public class MyFollowActivity extends BaseActivity implements View.OnClickListen
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         follow_RecyclerView.setLayoutManager(layoutManager);
         follow_RecyclerView.setAdapter(adapter);
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                Toast.makeText(MyFollowActivity.this,mlist.get(position).toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

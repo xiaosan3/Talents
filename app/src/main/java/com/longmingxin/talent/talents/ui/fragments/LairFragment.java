@@ -116,6 +116,7 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
         lair_tuijian_rv.setLayoutManager(layoutManager);
         lair_tuijian_rv.setAdapter(adapter);
         initBanner();
+
     }
 
     private void initBanner() {
