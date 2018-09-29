@@ -43,7 +43,7 @@
         <activity android:name=".ui.fragments.MyFragment.MyActivity.DeliveryRecordsActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.InterviewRecordsActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyCurriculumActivity" />
-        <activity android:name=".ui.fragments.MyFragment.MyActivity.MyOrderActivity" />
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.myorder.MyOrderActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.MyFollowActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.news.MyNewsActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyTeamActivity" />

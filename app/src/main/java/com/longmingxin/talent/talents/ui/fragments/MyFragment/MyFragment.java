@@ -17,7 +17,7 @@ import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyAbout
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyCurriculumActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyFollowActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.news.MyNewsActivity;
-import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MyOrderActivity;
+import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.myorder.MyOrderActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.MySettingActivity;
 import com.longmingxin.talent.talents.ui.fragments.MyFragment.MyActivity.team.MyTeamActivity;
 
