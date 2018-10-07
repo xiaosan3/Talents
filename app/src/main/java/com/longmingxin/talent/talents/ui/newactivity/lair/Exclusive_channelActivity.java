@@ -1,7 +1,5 @@
 package com.longmingxin.talent.talents.ui.newactivity.lair;
 
-import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,19 +33,15 @@ public class Exclusive_channelActivity extends BaseActivity {
     @Override
     protected void initView() {
         exclusive_RecyclerView = (RecyclerView) findViewById(R.id.exclusive_RecyclerView);
-        adapter = new Exclusive_SubAdapter(R.layout.exclusive_item, mlist);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        exclusive_RecyclerView.setLayoutManager(layoutManager);
-        exclusive_RecyclerView.setAdapter(adapter);
+//        adapter = new Exclusive_SubAdapter(R.layout.exclusive_item, mlist);
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+//        exclusive_RecyclerView.setLayoutManager(layoutManager);
+//        exclusive_RecyclerView.setAdapter(adapter);
     }
 
     @Override
     protected void initData() {
-        for (int i = 0; i < 2; i++) {
-            Exclusive_Data exclusive_data = new Exclusive_Data("土建/监理工程师", "6K-12K", "山东-济南市", "三年经验  大专以上学历", "", "2018-09-02");
-            mlist.add(exclusive_data);
-        }
-        adapter.notifyDataSetChanged();
+
     }
 
     @Override
@@ -55,9 +49,5 @@ public class Exclusive_channelActivity extends BaseActivity {
 
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) and run LayoutCreator again
-    }
+
 }

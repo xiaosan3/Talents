@@ -30,7 +30,7 @@ public class RetrofitUtils {
         //告诉Retrofit使用rxjava来执行网络请求
         return new Retrofit.Builder()
                 //创建服务器地址
-                .baseUrl(Urls.OTC)
+                .baseUrl(Urls.LMX)
                 .addConverterFactory(GsonConverterFactory.create())
                 //告诉Retrofit使用rxjava来执行网络请求
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

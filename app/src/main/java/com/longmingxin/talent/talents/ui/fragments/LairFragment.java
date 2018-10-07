@@ -112,8 +112,6 @@ public class LairFragment extends BaseFragment<setHomePagerPresenter> implements
         lair_Bricklayer.setOnClickListener(this);
         lair_Machinist.setOnClickListener(this);
         lair_More.setOnClickListener(this);
-
-
         initBanner();
         presenter.setHomePage("1");
 

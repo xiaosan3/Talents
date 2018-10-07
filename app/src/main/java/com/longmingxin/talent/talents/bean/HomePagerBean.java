@@ -42,6 +42,15 @@ public class HomePagerBean {
         this.message = message;
     }
 
+    @Override
+    public String toString() {
+        return "HomePagerBean{" +
+                "success=" + success +
+                ", data=" + data +
+                ", message=" + message +
+                '}';
+    }
+
     public static class DataBean {
         /**
          * notices : xxx1通过xxx培训，取得xxx资格证书|xxx2通过xxx培训，取得xxx资格证书
@@ -127,6 +136,7 @@ public class HomePagerBean {
             this.jobs = jobs;
         }
 
+
         public static class RecruitshelpBean {
             /**
              * pic : /images/20121121/3.jpg
@@ -151,7 +161,16 @@ public class HomePagerBean {
             public void setContent(String content) {
                 this.content = content;
             }
+
+            @Override
+            public String toString() {
+                return "RecruitshelpBean{" +
+                        "pic='" + pic + '\'' +
+                        ", content='" + content + '\'' +
+                        '}';
+            }
         }
+
 
         public static class ProjectsBean {
             /**
@@ -207,7 +226,19 @@ public class HomePagerBean {
             public void setDescribe(String describe) {
                 this.describe = describe;
             }
+
+            @Override
+            public String toString() {
+                return "ProjectsBean{" +
+                        "pic='" + pic + '\'' +
+                        ", projectName='" + projectName + '\'' +
+                        ", location='" + location + '\'' +
+                        ", recruitingNumbers='" + recruitingNumbers + '\'' +
+                        ", describe='" + describe + '\'' +
+                        '}';
+            }
         }
+
 
         public static class JobsBean {
             /**
@@ -283,6 +314,20 @@ public class HomePagerBean {
             public void setPubDate(String pubDate) {
                 this.pubDate = pubDate;
             }
+        }
+
+        @Override
+        public String toString() {
+            return "DataBean{" +
+                    "notices='" + notices + '\'' +
+                    ", adImage='" + adImage + '\'' +
+                    ", updatetime=" + updatetime +
+                    ", banners='" + banners + '\'' +
+                    ", learnTags='" + learnTags + '\'' +
+                    ", recruitshelp=" + recruitshelp +
+                    ", projects=" + projects +
+                    ", jobs=" + jobs +
+                    '}';
         }
     }
 }

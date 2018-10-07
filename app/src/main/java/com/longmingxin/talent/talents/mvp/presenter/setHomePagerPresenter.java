@@ -45,10 +45,10 @@ public class setHomePagerPresenter implements Contract.IsetHomePagePresenter {
                     public void accept(HomePagerBean homePagerBean) throws Exception {
 
                         if (homePagerBean.isSuccess()){
-                            iGetHomePagerView.showHome(homePagerBean.getMessage().toString());
+                            iGetHomePagerView.showHome(homePagerBean);
                             iGetHomePagerView.showIntent();
                         }else {
-                            iGetHomePagerView.showHome(homePagerBean.getMessage().toString());
+                            iGetHomePagerView.showHome(homePagerBean);
                         }
 
                     }

@@ -6,11 +6,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
+import com.longmingxin.talent.talents.mvp.contract.Contract;
+import com.longmingxin.talent.talents.mvp.presenter.setResetPresenter;
 
-public class Account_ForgetActivity extends BaseActivity implements View.OnClickListener{
+public class Account_ForgetActivity extends BaseActivity<setResetPresenter> implements View.OnClickListener,Contract.IGetResetView {
 
 
     private ImageView forget_return_button;
@@ -63,9 +66,10 @@ public class Account_ForgetActivity extends BaseActivity implements View.OnClick
                 finish();
                 break;
             case R.id.forget_Number_of_seconds:
+                presenter.setMessage(forget_userName.getText().toString());
                 break;
             case R.id.forget_But:
-                startActivity(new Intent(this,NewPasswordActivity.class));
+                presenter.setReset(forget_userName.getText().toString(),forget_userYanZhengMa.getText().toString());
                 break;
             case R.id.forget_Wechat:
                 break;
@@ -74,5 +78,18 @@ public class Account_ForgetActivity extends BaseActivity implements View.OnClick
             case R.id.forget_QQ:
                 break;
         }
+    }
+
+
+    @Override
+    public void showReset(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showIntent(String token) {
+        Intent intent = new Intent(Account_ForgetActivity.this, NewPasswordActivity.class);
+        intent.putExtra("token",token);
+        startActivity(intent);
     }
 }

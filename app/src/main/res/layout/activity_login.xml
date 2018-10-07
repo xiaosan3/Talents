@@ -8,21 +8,20 @@
     tools:context="com.longmingxin.talent.talents.ui.login.LoginActivity">
 
 
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="128px"
+        android:layout_height="wrap_content"
         android:background="@color/colorRed">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_marginTop="40px"
             android:text="登录方式"
-            android:textColor="@color/colorWhite"
-            android:textSize="40px" />
-    </RelativeLayout>
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+    </android.support.v7.widget.Toolbar>
+
 
     <ImageView
         android:layout_width="137px"
@@ -176,7 +175,7 @@
             android:background="@color/colorRed" />
 
         <TextView
-            android:id="@+id/loging_Number_of_seconds"
+            android:id="@+id/loging_seconds"
             android:layout_width="wrap_content"
             android:layout_height="42px"
             android:layout_marginLeft="560px"

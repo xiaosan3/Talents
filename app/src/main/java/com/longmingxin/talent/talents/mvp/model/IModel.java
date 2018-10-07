@@ -47,6 +47,8 @@ public interface IModel {
     @GET(Urls.HOME)
     Observable<HomePagerBean> getHome(@Header("token") String token);
 
-
+  //首页图片
+    //@GET(Urls.HOME_PICTURE)
+   // Observable<ResponseBody> getHome_picture
 
 }

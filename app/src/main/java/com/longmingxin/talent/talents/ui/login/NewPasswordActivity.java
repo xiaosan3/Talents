@@ -5,11 +5,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
+import com.longmingxin.talent.talents.mvp.contract.Contract;
+import com.longmingxin.talent.talents.mvp.presenter.setResetPswPresenter;
 
-public class NewPasswordActivity extends BaseActivity implements View.OnClickListener{
+public class NewPasswordActivity extends BaseActivity<setResetPswPresenter> implements View.OnClickListener,Contract.IGetResetPswView{
 
 
     private ImageView password_return_button;
@@ -19,6 +22,7 @@ public class NewPasswordActivity extends BaseActivity implements View.OnClickLis
     private ImageView password_Wechat;
     private ImageView password_WeiBo;
     private ImageView password_QQ;
+    private String token;
 
     @Override
     protected int getContentView() {
@@ -45,7 +49,7 @@ public class NewPasswordActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     protected void initData() {
-
+        token = getIntent().getStringExtra("token");
     }
 
     @Override
@@ -61,7 +65,7 @@ public class NewPasswordActivity extends BaseActivity implements View.OnClickLis
                 finish();
                 break;
             case R.id.password_But:
-                startActivity(new Intent(this,Login_Account_numberActivity.class));
+                presenter.setResetPsw(password_userName.getText().toString().trim(),token);
                 break;
             case R.id.password_Wechat:
                 break;
@@ -70,6 +74,17 @@ public class NewPasswordActivity extends BaseActivity implements View.OnClickLis
             case R.id.password_QQ:
                 break;
         }
+
+    }
+
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showIntent() {
+        startActivity(new Intent(this,Login_Account_numberActivity.class));
 
     }
 }

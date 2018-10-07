@@ -7,43 +7,31 @@
     android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.register.RegisterActivity">
 
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/login_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="128px"
+        android:layout_height="wrap_content"
         android:background="@color/colorRed">
-
-        <ImageView
-            android:id="@+id/register_return_button"
-            android:layout_width="30px"
-            android:layout_height="40px"
-            android:layout_marginLeft="10px"
-            android:layout_marginTop="40px"
-            android:background="@drawable/return_button" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_marginTop="40px"
             android:text="注册"
-            android:textColor="@color/colorWhite"
-            android:textSize="40px" />
+            android:textColor="#ffffff"
+            android:textSize="36px" />
 
         <TextView
             android:id="@+id/register_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
+            android:layout_gravity="end"
             android:layout_marginRight="30px"
-            android:layout_marginTop="40px"
             android:text="登录"
             android:textColor="@color/colorWhite"
-            android:textSize="30px" />
+            />
+    </android.support.v7.widget.Toolbar>
 
-    </RelativeLayout>
 
     <ImageView
         android:layout_width="137px"

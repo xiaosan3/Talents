@@ -44,7 +44,7 @@ public class setRegisterPresenter implements Contract.IsetRegisterPresenter {
                     @Override
                     public void accept(CodeBean codeBean) throws Exception {
                         if (codeBean.isSuccess()) {
-                            iGetRegisterView.showMessage("获取验证码成功！");
+                            iGetRegisterView.showMessage(codeBean.getMessage());
                         }
                     }
                 });
@@ -61,7 +61,7 @@ public class setRegisterPresenter implements Contract.IsetRegisterPresenter {
             iGetRegisterView.showMessage("密码不能为空");
             return;
         }
-        Observable<CodeBean> observable = iModel.getRegister( username, passwd,vcode);
+        Observable<CodeBean> observable = iModel.getRegister(username, passwd,vcode);
         observable.subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Consumer<CodeBean>() {

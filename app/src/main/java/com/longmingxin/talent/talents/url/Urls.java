@@ -7,9 +7,9 @@ package com.longmingxin.talent.talents.url;
 
 public class Urls  {
 
-    //OTC
+    //LMX
 
-    public static final String OTC = "http://221.225.80.128:8888/";
+    public static final String LMX = "http://221.225.80.128:8888/";
 
     //发送验证码
     public static final String SEND_CODE = "/lmx/sendVerificationSms";
@@ -31,6 +31,8 @@ public class Urls  {
     public static final String  PASSWORD = "/lmx/reset_passwd";
 
     //首页
-    public static final String  HOME = "/lmx/reset_passwd";
+    public static final String  HOME = "/lmx/v1.0.0/index";
 
+    //首页图片
+    public static final String  HOME_PICTURE = "/lmx/v1.0.0/index";
 }

@@ -1,8 +1,8 @@
 package com.longmingxin.talent.talents.ui.login;
 
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
-import android.text.TextUtils;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,18 +13,17 @@ import android.widget.Toast;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
-import com.longmingxin.talent.talents.mvp.contract.Contract;
-import com.longmingxin.talent.talents.mvp.presenter.CodeLoginPresenter;
+import com.longmingxin.talent.talents.mvp.presenter.setMessagePresenter;
 import com.longmingxin.talent.talents.ui.activity.MainActivity;
 import com.longmingxin.talent.talents.ui.register.RegisterActivity;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener ,Contract.ICodeLoginView<Contract.ICodeLoginPresenter>{
+public class LoginActivity extends BaseActivity<setMessagePresenter> implements View.OnClickListener,com.longmingxin.talent.talents.mvp.contract.Contract.IGetMessageView {
 
     private TextView login_Quick_text;
     private TextView login_Account_text;
     private EditText login_phone;
     private EditText login_Yanzhengma;
-    private TextView loging_Number_of_seconds;
+    private TextView loging_seconds;
     private Button login_But;
     private TextView login_register;
     private ImageView login_Wechat;
@@ -34,12 +33,17 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private LinearLayout login_Quick;
     private View login_Account_view;
     private LinearLayout login_Account;
-    private Contract.ICodeLoginPresenter iCodeLoginPresenter1;
     private String phone;
+    private int countdown = 60;
 
 
     @Override
     protected int getContentView() {
+        SharedPreferences sp = getSharedPreferences("sp", 1);
+        String string = sp.getString("1", "1");
+        if (string.equals("1")){
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+        }
         return R.layout.activity_login;
     }
 
@@ -54,8 +58,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         login_phone.setOnClickListener(this);
         login_Yanzhengma = (EditText) findViewById(R.id.login_Yanzhengma);
         login_Yanzhengma.setOnClickListener(this);
-        loging_Number_of_seconds = (TextView) findViewById(R.id.loging_Number_of_seconds);
-        loging_Number_of_seconds.setOnClickListener(this);
+        loging_seconds = (TextView) findViewById(R.id.loging_seconds);
+        loging_seconds.setOnClickListener(this);
         login_register = (TextView) findViewById(R.id.login_register);
         login_register.setOnClickListener(this);
         login_Wechat = (ImageView) findViewById(R.id.login_Wechat);
@@ -70,7 +74,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         login_Quick.setOnClickListener(this);
         login_Account = (LinearLayout) findViewById(R.id.login_Account);
         login_Account.setOnClickListener(this);
-        new CodeLoginPresenter(this);
 
     }
 
@@ -96,47 +99,61 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 startActivity(new Intent(this, Login_Account_numberActivity.class));
                 break;
             //获取验证码接口
-            case R.id.loging_Number_of_seconds:
-                phone = login_phone.getText().toString();
-                iCodeLoginPresenter1.setCode(phone);
-                if (phone.length() != 0) {
-                    loging_Number_of_seconds.setText("正在发送..");
-                    loging_Number_of_seconds.setTextColor(ContextCompat.getColor(this, R.color.colorGray));
-                }
+            case R.id.loging_seconds:
+                presenter.setMessage(login_phone.getText().toString().trim());
+                //数字倒计时
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        //倒计时开始，循环
+                        while (countdown > 0) {
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+                                    loging_seconds.setTextColor(Color.parseColor("#b3b3b3"));
+                                    loging_seconds.setText(countdown + "s");
+                                }
+                            });
+                            try {
+                                Thread.sleep(1000); //强制线程休眠1秒，就是设置倒计时的间隔时间为1秒。
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                            countdown--;
+                        }
+                        //倒计时结束
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                loging_seconds.setText("获取验证码");
+                                loging_seconds.setTextColor(Color.parseColor("#f39035"));
+                            }
+                        });
+                    }
+                }).start();
                 break;
+
             case R.id.login_But:
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                presenter.setLogin(login_phone.getText().toString().trim(),login_Yanzhengma.getText().toString().trim());
                 break;
         }
     }
 
 
-    private void submit() {
-        // validate
-        String phone = login_phone.getText().toString().trim();
-        if (TextUtils.isEmpty(phone)) {
-            Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        String Yanzhengma = login_Yanzhengma.getText().toString().trim();
-        if (TextUtils.isEmpty(Yanzhengma)) {
-            Toast.makeText(this, "请输入验证码", Toast.LENGTH_SHORT).show();
-            return;
-        }
-
-        // TODO validate success, do something
-
-
-    }
 
     @Override
-    public void getCodeLogin() {
-
+    public void showMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
+
+
     @Override
-    public void setPresenter(Contract.ICodeLoginPresenter iCodeLoginPresenter) {
-        iCodeLoginPresenter1 = iCodeLoginPresenter;
+    public void showIntent() {
+        SharedPreferences sp = getSharedPreferences("sp", 0);
+        SharedPreferences.Editor edit = sp.edit();
+        edit.putString("1","");
+        edit.commit();
+        startActivity(new Intent(LoginActivity.this, MainActivity.class));
     }
 }
