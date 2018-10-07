@@ -39,7 +39,7 @@ public class LoginActivity extends BaseActivity<setMessagePresenter> implements 
 
     @Override
     protected int getContentView() {
-        SharedPreferences sp = getSharedPreferences("sp", 1);
+        SharedPreferences sp = getSharedPreferences("sp", 0);
         String string = sp.getString("1", "1");
         if (string.equals("1")){
             startActivity(new Intent(LoginActivity.this, MainActivity.class));

@@ -6,7 +6,10 @@
     tools:context="com.longmingxin.talent.talents.ui.fragments.LearningAbilityFragment">
 
     <!-- TODO: Update blank fragment layout -->
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="33px"
+        android:background="@color/colorRed"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="128px"
