@@ -11,24 +11,26 @@ public class Urls  {
 
     public static final String OTC = "http://221.225.80.128:8888/";
 
-    //极验
-    public static final String EXTREME = "https://otc.coinauc.com/api/uc/start/captcha";
-
     //发送验证码
-    public static final String SEND_CODE = "sendVerificationSms";
+    public static final String SEND_CODE = "/lmx/sendVerificationSms";
 
     //注册
-    public static final String REGISTER = "/api/uc/register";
+    public static final String REGISTER = "/lmx/v1.0.0/register";
 
-    //登录
-    public static final String LOGIN = "api/uc/login";
+    //发送图片验证码
 
-    //获取个人资产
-    public static final String PROPERTY = "api/uc/asset/wallet";
+    public static final String PICTURE = "/lmx/sendVerificationPic";
 
+    //快捷登录
+    public static final String  QUICK_LOGIN = "/lmx/v1.0.0/quick_login";
 
-    //获取买卖交易记录
-    public static final String BUSINESSOTC = "api/presell/page-by-unit";
+    //重置密码
+    public static final String  RESET_PASSWORD = "/lmx/send_reset_passwd_command";
 
+    //确认密码
+    public static final String  PASSWORD = "/lmx/reset_passwd";
+
+    //首页
+    public static final String  HOME = "/lmx/reset_passwd";
 
 }

@@ -17,7 +17,9 @@ import android.widget.TextView;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseFragment;
-import com.longmingxin.talent.talents.bean.Exclusive_Data;
+import com.longmingxin.talent.talents.bean.HomePagerBean;
+import com.longmingxin.talent.talents.mvp.contract.Contract;
+import com.longmingxin.talent.talents.mvp.presenter.setHomePagerPresenter;
 import com.longmingxin.talent.talents.ui.adapter.Exclusive_SubAdapter;
 import com.longmingxin.talent.talents.ui.newactivity.CourseActivity;
 import com.longmingxin.talent.talents.ui.newactivity.lair.Exclusive_channelActivity;
@@ -32,7 +34,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LairFragment extends BaseFragment implements View.OnClickListener {
+public class LairFragment extends BaseFragment<setHomePagerPresenter> implements View.OnClickListener,Contract.IGetHomePagerView {
 
 
     private ImageView lair_Location;
@@ -66,8 +68,10 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
     private TextView hangye;
     private RecyclerView lair_zaizhao_rv;
     private RecyclerView lair_tuijian_rv;
-    private List<Exclusive_Data> mlist = new ArrayList<>();
+    private List<HomePagerBean.DataBean.JobsBean> mlist = new ArrayList<>();
     private Exclusive_SubAdapter adapter;
+    private HomePagerBean pagerBean;
+
     public LairFragment() {
         // Required empty public constructor
     }
@@ -110,12 +114,8 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
         lair_More.setOnClickListener(this);
 
 
-
-        adapter = new Exclusive_SubAdapter(R.layout.exclusive_item, mlist);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
-        lair_tuijian_rv.setLayoutManager(layoutManager);
-        lair_tuijian_rv.setAdapter(adapter);
         initBanner();
+        presenter.setHomePage("1");
 
     }
 
@@ -125,11 +125,7 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
 
     @Override
     protected void initData(View view) {
-        for (int i = 0; i < 2; i++) {
-            Exclusive_Data exclusive_data = new Exclusive_Data("土建/监理工程师", "6K-12K", "山东-济南市", "三年经验  大专以上学历", "", "2018-09-02");
-            mlist.add(exclusive_data);
-        }
-        adapter.notifyDataSetChanged();
+
     }
 
     @Override
@@ -175,5 +171,21 @@ public class LairFragment extends BaseFragment implements View.OnClickListener {
                 startActivity(new Intent(getActivity(), CourseActivity.class));
                 break;
         }
+    }
+
+    @Override
+    public void showHome(HomePagerBean homePagerBean) {
+        pagerBean = homePagerBean;
+        List<HomePagerBean.DataBean.JobsBean> jobs = pagerBean.getData().getJobs();
+        mlist.addAll(jobs);
+        adapter = new Exclusive_SubAdapter(R.layout.exclusive_item, mlist);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        lair_tuijian_rv.setLayoutManager(layoutManager);
+        lair_tuijian_rv.setAdapter(adapter);
+    }
+
+    @Override
+    public void showIntent() {
+
     }
 }

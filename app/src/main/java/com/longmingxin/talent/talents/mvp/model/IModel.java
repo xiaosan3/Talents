@@ -1,48 +1,52 @@
 package com.longmingxin.talent.talents.mvp.model;
 
-
-import com.longmingxin.talent.talents.bean.Business;
-import com.longmingxin.talent.talents.bean.Login;
-import com.longmingxin.talent.talents.bean.Property;
+import com.longmingxin.talent.talents.bean.CodeBean;
+import com.longmingxin.talent.talents.bean.HomePagerBean;
+import com.longmingxin.talent.talents.bean.MessageBean;
+import com.longmingxin.talent.talents.bean.PictureBean;
+import com.longmingxin.talent.talents.bean.ResetPassword;
 import com.longmingxin.talent.talents.url.Urls;
 
 import io.reactivex.Observable;
-import okhttp3.ResponseBody;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
-
-/**
- * Created by ASUS on 2018/9/26.
- *
- */
+import retrofit2.http.PUT;
+import retrofit2.http.Query;
 
 public interface IModel {
+
+    //发送短信验证
+    @GET(Urls.SEND_CODE)
+    Observable<CodeBean> getCodeLogin(@Query("mobi")String mobi);
 
     //注册
     @FormUrlEncoded
     @POST(Urls.REGISTER)
-    Observable<Login> getLogin(@Header("Content-Type") String Content_Type, @Field("userName") String userName, @Field("password") String password, @Field("confirmPassword") String confirmPassword, @Field("countryCode") String countryCode, @Field("nickName") String nickName, @Field("code") String code, @Field("type") String type, @Field("payPassword") String payPassword, @Field("confirmPayPassword") String confirmPayPassword);
+    Observable<CodeBean> getRegister(@Field("mobi") String mobi, @Field("passwd") String password, @Field("vcode") String vcode);
 
-    //发送验证码
-    @GET(Urls.SEND_CODE)
-    Observable<ResponseBody> getVerification_Code();
+    //发送图片验证码
+    @GET(Urls.PICTURE)
+    Observable<PictureBean> getPicture(@Query("account") String account);
 
-    //登录
-    @FormUrlEncoded
-    @POST(Urls.LOGIN)
-    Observable<Login> getLogin(@Header("Content-Type") String Content_Type, @Field("userName") String userName, @Field("password") String password);
+    //快捷登录
+    @GET(Urls.QUICK_LOGIN)
+    Observable<MessageBean> getQuick_Login(@Query("mobi") String mobi, @Query("vcode") String vcode);
 
-    //获取个人资产
-    @POST(Urls.PROPERTY)
-    Observable<Property> getProperty(@Header("Content-Type") String Content_Type);
+    //重置密码
+    @PUT(Urls.RESET_PASSWORD)
+    Observable<ResetPassword> getReset_Password(@Query("mobi") String mobi, @Query("vcode") String vcode);
+
+    //确认密码
+    @PUT(Urls.PASSWORD)
+    Observable<MessageBean> getPassword(@Query("npasswd") String password, @Header("token") String tooken);
+
+    //首页
+    @GET(Urls.HOME)
+    Observable<HomePagerBean> getHome(@Header("token") String token);
 
 
-    //获取买卖订单信息
-    @FormUrlEncoded
-    @POST(Urls.BUSINESSOTC)
-    Observable<Business> getBusiness(@Header("Content-Type") String Content_Type, @Field("advertiseType") String advertiseType, @Field("isCertified") String isCertified, @Field("unit") String unit, @Field("coinType") String coinType, @Field("paymentType") String paymentType);
 
 }

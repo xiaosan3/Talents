@@ -4,7 +4,7 @@ package com.longmingxin.talent.talents.bean;
  * Created by ASUS on 2018/9/27.
  */
 
-public class CodeBean {
+public class MessageBean {
 
     /**
      * success : true
@@ -13,16 +13,16 @@ public class CodeBean {
      */
 
     private boolean success;
-    private String data;
+    private Object data;
     private String message;
 
-    public CodeBean() {
+    public MessageBean() {
     }
 
-    public CodeBean(String data, String message, boolean success) {
+    public MessageBean(boolean success, Object data, String message) {
+        this.success = success;
         this.data = data;
         this.message = message;
-        this.success = success;
     }
 
     public boolean isSuccess() {
@@ -33,11 +33,11 @@ public class CodeBean {
         this.success = success;
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
@@ -51,9 +51,9 @@ public class CodeBean {
 
     @Override
     public String toString() {
-        return "CodeBean{" +
+        return "MessageBean{" +
                 "success=" + success +
-                ", data='" + data + '\'' +
+                ", data=" + data +
                 ", message='" + message + '\'' +
                 '}';
     }
