@@ -9,7 +9,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.longmingxin.talent.talents.R;
-import com.longmingxin.talent.talents.Utils.sharedpreferences.SharedPreferencesUtils;
 import com.longmingxin.talent.talents.Utils.toolbar.ToolBarUtils;
 import com.longmingxin.talent.talents.base.BaseActivity;
 import com.longmingxin.talent.talents.ui.login.newfragment.Account_numberFragment;
@@ -51,10 +50,7 @@ public class Login_ToActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     protected void initData() {
-        //首次进来我们的数据保存和我们的展示界面，为我们的我要快捷登录页面
-        SharedPreferencesUtils.getInstance().setSharedPreferencesString("loginType", "LOGIN_QUICK");
-        SharedPreferencesUtils.getInstance().setSharedPreferencesString("lgType", "LG");
-        SharedPreferencesUtils.getInstance().setSharedPreferencesString("unit", "1");
+
 
         setContentView(Quickragment.class, R.id.login_fragment);
 
@@ -78,7 +74,6 @@ public class Login_ToActivity extends BaseActivity implements View.OnClickListen
                 login_Account_text.setTextColor(Color.parseColor("#b3b3b3"));
                 login_Account_buttom.setVisibility(View.GONE);
 
-                SharedPreferencesUtils.getInstance().setSharedPreferencesString("loginType", "LOGIN_QUICK");
                 setContentView(Quickragment.class, R.id.login_fragment);
 
                 break;
@@ -89,9 +84,7 @@ public class Login_ToActivity extends BaseActivity implements View.OnClickListen
                 login_Account_buttom.setVisibility(View.VISIBLE);
                 login_Account_text.setTextColor(Color.parseColor("#f39035"));
                 login_Quick_text.setTextColor(Color.parseColor("#b3b3b3"));
-                SharedPreferencesUtils.getInstance().setSharedPreferencesString("loginType", "LOGIN_ACCOUNT");
                 setContentView(Account_numberFragment.class, R.id.login_fragment);
-
 
                 break;
         }

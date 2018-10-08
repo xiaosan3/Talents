@@ -7,44 +7,30 @@
     android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.register.Register_AgreementActivity">
 
-    <RelativeLayout
+    <View
         android:layout_width="match_parent"
-        android:layout_height="128px"
+        android:layout_height="33px"
+        android:background="@color/colorRed"/>
+       <android.support.v7.widget.Toolbar
+        android:id="@+id/agreement_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorRed">
 
-        <ImageView
-            android:id="@+id/register_return_button"
-            android:layout_width="30px"
-            android:layout_height="40px"
-            android:layout_marginLeft="10px"
-            android:layout_marginTop="40px"
-            android:background="@drawable/return_button" />
-
         <TextView
+            android:id="@+id/textA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_marginTop="40px"
             android:text="用户协议"
-            android:textColor="@color/colorWhite"
-            android:textSize="40px" />
-    </RelativeLayout>
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+    </android.support.v7.widget.Toolbar>
 
-    <TextView
+    <WebView
+        android:id="@+id/mWebView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20px"
-        android:padding="20px"
-        android:text="1.1 经本站注册系统完成注册程序并通过身份认证的用户即成为正式用户，可以获得本站规定用户所应享有的一切权限；未经认证仅享有本站规定的部分会员权限。保宝网有权对会员的权限设计进行变更。"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20px"
-        android:padding="20px"
-        android:text="1.2 用户只能按照注册要求使用真实姓名，及身份证号注册。用户有义务保证密码和帐号的安全，用户利用该密码和帐号所进行的一切活动引起的任何损失或损害，由用户自行承担全部责任，本站不承担任何责任。如用户发现帐号遭到未授权的使用或发生其他任何安全问题，应立即修改帐号密码并妥善保管，如有必要，请通知本站。因黑客行为或用户的保管疏忽导致帐号非法使用，本站不承担任何责任。"
-        />
+        android:layout_height="match_parent">
 
-
+    </WebView>
 </LinearLayout>

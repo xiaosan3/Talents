@@ -2,6 +2,7 @@ package com.longmingxin.talent.talents.mvp.model;
 
 import com.longmingxin.talent.talents.bean.CodeBean;
 import com.longmingxin.talent.talents.bean.HomePagerBean;
+import com.longmingxin.talent.talents.bean.Login_Data;
 import com.longmingxin.talent.talents.bean.MessageBean;
 import com.longmingxin.talent.talents.bean.PictureBean;
 import com.longmingxin.talent.talents.bean.ResetPassword;
@@ -33,7 +34,7 @@ public interface IModel {
 
     //快捷登录
     @GET(Urls.QUICK_LOGIN)
-    Observable<MessageBean> getQuick_Login(@Query("mobi") String mobi, @Query("vcode") String vcode);
+    Observable<Login_Data> getQuick_Login(@Query("mobi") String mobi, @Query("vcode") String vcode);
 
     //重置密码
     @PUT(Urls.RESET_PASSWORD)
@@ -50,5 +51,7 @@ public interface IModel {
   //首页图片
     //@GET(Urls.HOME_PICTURE)
    // Observable<ResponseBody> getHome_picture
+
+
 
 }

@@ -101,12 +101,12 @@ public class LoginActivity extends BaseActivity<setMessagePresenter> implements 
                 break;
             //获取验证码接口
             case R.id.loging_seconds:
-                presenter.setMessage(login_phone.getText().toString().trim());
-                initCount();
+               // presenter.setMessage(login_phone.getText().toString().trim());
+              //  initCount();
                 break;
 
             case R.id.login_But:
-                presenter.setLogin(login_phone.getText().toString().trim(),login_Yanzhengma.getText().toString().trim());
+                //presenter.setLogin(login_phone.getText().toString().trim(),login_Yanzhengma.getText().toString().trim());
                 break;
             case R.id.login_QQ:
                 startActivity(new Intent(this,Login_ToActivity.class));

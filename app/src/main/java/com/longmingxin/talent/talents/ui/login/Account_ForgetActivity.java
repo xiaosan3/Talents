@@ -1,12 +1,11 @@
 package com.longmingxin.talent.talents.ui.login;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,9 +22,6 @@ public class Account_ForgetActivity extends BaseActivity<setResetPresenter> impl
     private EditText forget_userYanZhengMa;
     private TextView forget_Number_of_seconds;
     private Button forget_But;
-    private ImageView forget_Wechat;
-    private ImageView forget_WeiBo;
-    private ImageView forget_QQ;
     private Toolbar forget_toolbar;
 
     @Override
@@ -39,17 +35,12 @@ public class Account_ForgetActivity extends BaseActivity<setResetPresenter> impl
         forget_userYanZhengMa = (EditText) findViewById(R.id.forget_userYanZhengMa);
         forget_Number_of_seconds = (TextView) findViewById(R.id.forget_Number_of_seconds);
         forget_But = (Button) findViewById(R.id.forget_But);
-        forget_Wechat = (ImageView) findViewById(R.id.forget_Wechat);
-        forget_WeiBo = (ImageView) findViewById(R.id.forget_WeiBo);
-        forget_QQ = (ImageView) findViewById(R.id.forget_QQ);
         forget_toolbar = (Toolbar) findViewById(R.id.forget_toolbar);
 
         forget_toolbar.setOnClickListener(this);
         forget_Number_of_seconds.setOnClickListener(this);
         forget_But.setOnClickListener(this);
-        forget_Wechat.setOnClickListener(this);
-        forget_WeiBo.setOnClickListener(this);
-        forget_QQ.setOnClickListener(this);
+
     }
 
     @Override
@@ -71,12 +62,7 @@ public class Account_ForgetActivity extends BaseActivity<setResetPresenter> impl
             case R.id.forget_But:
                 presenter.setReset(forget_userName.getText().toString(), forget_userYanZhengMa.getText().toString());
                 break;
-            case R.id.forget_Wechat:
-                break;
-            case R.id.forget_WeiBo:
-                break;
-            case R.id.forget_QQ:
-                break;
+
         }
     }
 
@@ -90,12 +76,8 @@ public class Account_ForgetActivity extends BaseActivity<setResetPresenter> impl
     public void showIntent(String token) {
         Intent intent = new Intent(Account_ForgetActivity.this, NewPasswordActivity.class);
         intent.putExtra("token", token);
+        Log.e("TAG",token);
         startActivity(intent);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) and run LayoutCreator again
-    }
 }

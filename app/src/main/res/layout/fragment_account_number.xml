@@ -10,7 +10,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34px">
+       >
 
         <ImageView
             android:id="@+id/img_youhu"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:layout_marginTop="15px"
+            android:layout_marginTop="20px"
             android:hint="用户名"
             android:textSize="28px"
             android:background="@null"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:layout_marginTop="15px"
+            android:layout_marginTop="20px"
             android:hint="密码"
             android:textSize="28px"
             android:background="@null"
@@ -93,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:layout_marginTop="15px"
+            android:layout_marginTop="20px"
             android:hint="验证码"
             android:textSize="28px"
             android:background="@null"
@@ -111,15 +111,15 @@
             android:layout_width="2px"
             android:layout_height="42px"
             android:layout_marginLeft="530px"
-            android:layout_marginTop="20px"
+            android:layout_marginTop="25px"
             android:background="@color/colorRed" />
 
         <ImageView
             android:id="@+id/loging_Number_of_seconds"
             android:layout_width="125px"
             android:layout_height="42px"
-            android:layout_marginLeft="560px"
-            android:layout_marginTop="20px"
+            android:layout_marginLeft="550px"
+            android:layout_marginTop="25px"
             android:background="@drawable/order_image"
             />
     </RelativeLayout>
@@ -129,7 +129,7 @@
         android:layout_width="600px"
         android:layout_height="80px"
         android:layout_gravity="center"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="80px"
         android:background="@drawable/login"
         android:text="登录"
         android:textColor="@color/colorWhite"

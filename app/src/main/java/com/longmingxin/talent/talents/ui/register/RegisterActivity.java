@@ -17,6 +17,9 @@ import com.longmingxin.talent.talents.base.BaseActivity;
 import com.longmingxin.talent.talents.mvp.contract.Contract;
 import com.longmingxin.talent.talents.mvp.presenter.setRegisterPresenter;
 import com.longmingxin.talent.talents.ui.login.LoginActivity;
+import com.longmingxin.talent.talents.ui.login.Login_ToActivity;
+
+import javax.security.auth.login.LoginException;
 
 public class RegisterActivity extends BaseActivity<setRegisterPresenter>implements View.OnClickListener,Contract.IGetRegisterView {
 
@@ -80,7 +83,7 @@ public class RegisterActivity extends BaseActivity<setRegisterPresenter>implemen
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.register_login:
-                startActivity(new Intent(this, RegisterActivity.class));
+                startActivity(new Intent(this, Login_ToActivity.class));
                 break;
             case R.id.register_HouQu:
                 presenter.setMessage(register_phone.getText().toString());

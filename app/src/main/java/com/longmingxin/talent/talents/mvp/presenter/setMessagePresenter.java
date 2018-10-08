@@ -2,8 +2,9 @@ package com.longmingxin.talent.talents.mvp.presenter;
 
 
 import com.longmingxin.talent.talents.Utils.RetrofitUtils;
+import com.longmingxin.talent.talents.Utils.sharedpreferences.SharedPreferencesUtils;
 import com.longmingxin.talent.talents.bean.CodeBean;
-import com.longmingxin.talent.talents.bean.MessageBean;
+import com.longmingxin.talent.talents.bean.Login_Data;
 import com.longmingxin.talent.talents.mvp.contract.Contract;
 import com.longmingxin.talent.talents.mvp.model.IModel;
 
@@ -57,14 +58,15 @@ public class setMessagePresenter implements Contract.IsetMessagePresenter {
         iModel.getQuick_Login(phone,vcode)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<MessageBean>() {
+                .subscribe(new Consumer<Login_Data>() {
                     @Override
-                    public void accept(MessageBean messageBean) throws Exception {
-                        if (messageBean.isSuccess()) {
-                            iGetMessageView.showMessage("获取验证码成功！");
+                    public void accept(Login_Data login_data) throws Exception {
+                        if (login_data.isSuccess()) {
+                            SharedPreferencesUtils.getInstance().setSharedPreferencesString("token",login_data.getData().getToken());
+                            iGetMessageView.showMessage(login_data.getMessage());
                             iGetMessageView.showIntent();
                         }else {
-                            iGetMessageView.showMessage(messageBean.getMessage());
+                            iGetMessageView.showMessage(login_data.getMessage());
                         }
                     }
                 });

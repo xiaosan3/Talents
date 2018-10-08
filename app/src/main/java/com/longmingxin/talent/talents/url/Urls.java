@@ -11,6 +11,8 @@ public class Urls  {
 
     public static final String LMX = "http://221.225.80.128:8888/";
 
+    public static final String AT = "http://agri.bnzxsoft.cn/";
+
     //发送验证码
     public static final String SEND_CODE = "/lmx/sendVerificationSms";
 
@@ -35,4 +37,7 @@ public class Urls  {
 
     //首页图片
     public static final String  HOME_PICTURE = "/lmx/v1.0.0/index";
+
+    //用户同意协议
+    public static final String  AGREEMENT = "/xmzp/agreement";
 }

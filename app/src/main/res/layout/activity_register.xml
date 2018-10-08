@@ -6,7 +6,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.register.RegisterActivity">
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="33px"
+        android:background="@color/colorRed"/>
     <android.support.v7.widget.Toolbar
     android:id="@+id/login_toolbar"
     android:layout_width="match_parent"
@@ -26,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_marginRight="30px"
+        android:layout_marginRight="24px"
         android:text="登录"
         android:textColor="@color/colorWhite"
         />
@@ -37,13 +40,13 @@
         android:layout_width="137px"
         android:layout_height="84px"
         android:layout_gravity="center"
-        android:layout_marginTop="82px"
+        android:layout_marginTop="41px"
         android:src="@mipmap/login_logo" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24px"
+        android:layout_marginTop="12px"
         android:gravity="center"
         android:text="龙才网"
         android:textColor="#484848"
@@ -52,12 +55,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60px">
+        android:layout_marginTop="80px">
 
         <ImageView
             android:id="@+id/img_youhu"
-            android:layout_width="48px"
-            android:layout_height="80px"
+            android:layout_width="40px"
+            android:layout_height="70px"
             android:layout_marginLeft="104px"
             android:src="@drawable/pone" />
 
@@ -68,7 +71,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:layout_marginTop="25px"
+            android:layout_marginTop="20px"
             android:hint="手机号码"
             android:textSize="28px"
             android:background="@null"
@@ -86,12 +89,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5px">
+        >
 
         <ImageView
             android:id="@+id/img_mima"
-            android:layout_width="48px"
-            android:layout_height="80px"
+            android:layout_width="40px"
+            android:layout_height="70px"
             android:layout_marginLeft="104px"
             android:src="@drawable/pwd_image" />
 
@@ -102,7 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:layout_marginTop="30px"
+            android:layout_marginTop="20px"
             android:hint="密码"
             android:textSize="28px"
             android:background="@null"
@@ -119,12 +122,12 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5px">
+        >
 
         <ImageView
             android:id="@+id/img_yanzhengma"
-            android:layout_width="48px"
-            android:layout_height="80px"
+            android:layout_width="40px"
+            android:layout_height="70px"
             android:layout_marginLeft="104px"
             android:src="@drawable/yanzhen" />
 
@@ -135,7 +138,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="26px"
             android:layout_marginRight="75px"
-            android:layout_marginTop="30px"
+            android:layout_marginTop="20px"
             android:hint="验证码"
             android:textSize="28px"
             android:background="@null"
@@ -152,7 +155,7 @@
             android:id="@+id/caurse_view"
             android:layout_width="2px"
             android:layout_height="42px"
-            android:layout_marginLeft="530px"
+            android:layout_marginLeft="510px"
             android:layout_marginTop="30px"
             android:background="@color/colorRed" />
 
@@ -160,7 +163,7 @@
             android:id="@+id/register_HouQu"
             android:layout_width="wrap_content"
             android:layout_height="42px"
-            android:layout_marginLeft="570px"
+            android:layout_marginLeft="530px"
             android:layout_marginTop="40px"
             android:text="获取验证码"
             android:textColor="@color/colorRed"
@@ -172,7 +175,7 @@
         android:layout_width="600px"
         android:layout_height="80px"
         android:layout_gravity="center"
-        android:layout_marginTop="80px"
+        android:layout_marginTop="52px"
         android:background="@drawable/login"
         android:text="注册"
         android:textColor="@color/colorWhite"
@@ -182,7 +185,7 @@
         android:id="@+id/register_Agreement"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40px"
+        android:layout_marginTop="42px"
         android:orientation="horizontal">
 
         <ImageView
@@ -212,7 +215,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30px"
+        android:layout_marginTop="50px"
 
         >
         <TextView
@@ -244,7 +247,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40px"
+        android:layout_marginTop="50px"
         android:orientation="horizontal">
 
         <ImageView

@@ -30,13 +30,13 @@
         android:layout_width="137px"
         android:layout_height="84px"
         android:layout_gravity="center"
-        android:layout_marginTop="82px"
+        android:layout_marginTop="41px"
         android:src="@mipmap/login_logo" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24px"
+        android:layout_marginTop="12px"
         android:gravity="center"
         android:text="龙才网"
         android:textColor="#484848"
@@ -108,7 +108,9 @@
     <FrameLayout
         android:id="@+id/login_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="40px"
+        />
 
 
 </LinearLayout>

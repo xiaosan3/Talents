@@ -88,4 +88,6 @@ public interface Contract {
 
         void showIntent();
     }
+
 }
+
