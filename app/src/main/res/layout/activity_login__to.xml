@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login__to"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.longmingxin.talent.talents.ui.login.Login_ToActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="33px"
+        android:background="@color/colorRed"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/login_mtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorRed">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="登录方式"
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <ImageView
+        android:layout_width="137px"
+        android:layout_height="84px"
+        android:layout_gravity="center"
+        android:layout_marginTop="82px"
+        android:src="@mipmap/login_logo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24px"
+        android:gravity="center"
+        android:text="龙才网"
+        android:textColor="#484848"
+        android:textSize="36px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77px"
+        android:layout_marginTop="80px"
+        >
+
+        <RelativeLayout
+            android:id="@+id/login_Quick_rl"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/login_Quick_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="快捷登录"
+                android:textSize="36px"
+                android:textColor="@color/colorRed"
+                />
+
+            <View
+                android:id="@+id/login_Quick_buttom"
+                android:layout_width="160px"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorRed"
+                android:visibility="gone"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_Account_rl"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/login_Account_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="账号登录"
+                android:textSize="36px"
+                />
+
+            <View
+                android:id="@+id/login_Account_buttom"
+                android:layout_width="160px"
+                android:layout_height="4px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorRed"
+                android:visibility="gone"
+                 />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/login_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

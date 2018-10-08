@@ -54,7 +54,7 @@
         <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.BackgroundActivity" />
         <activity android:name=".foundwork.ui.activity.PostInformationActivity" />
         <activity android:name=".foundwork.ui.activity.EnterpriseReviewActivity" />
-        <activity android:name=".foundwork.ui.activity.EnterpriseInformationActivity"></activity>
+        <activity android:name=".foundwork.ui.activity.EnterpriseInformationActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.CurriculumVitae.BackgroundActivity" />
         <activity android:name=".ui.newactivity.Train_SchoolActivity" />
         <activity android:name=".ui.newactivity.lair.High_salary_postActivity" />
@@ -64,9 +64,9 @@
         <activity android:name=".ui.newactivity.lair.XiangQingActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.news.NoticeActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupActivity" />
-        <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupDetailsActivity"></activity>
+        <activity android:name=".ui.fragments.MyFragment.MyActivity.team.MyGroupDetailsActivity" />
         <activity android:name=".ui.register.Register_AgreementActivity" />
-        <activity android:name=".ui.login.Login_Account_numberActivity" />
+        <activity android:name=".ui.fragments.LearningAbilityFragment$Login_Account_numberActivity" />
         <!--
  ATTENTION: This was auto-generated to add Google Play services to your project for
      App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -78,7 +78,8 @@
         <activity android:name=".ui.newactivity.lair.XiangQingActivity" />
         <activity android:name=".ui.fragments.MyFragment.MyActivity.news.NoticeActivity" />
         <activity android:name=".ui.login.Account_ForgetActivity" />
-        <activity android:name=".ui.login.NewPasswordActivity"></activity>
+        <activity android:name=".ui.login.NewPasswordActivity" />
+        <activity android:name=".ui.login.Login_ToActivity"></activity>
     </application>
 
 </manifest>

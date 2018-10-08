@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.longmingxin.talent.talents.ui.login.Login_Account_numberActivity">
+    tools:context="com.longmingxin.talent.talents.ui.fragments.LearningAbilityFragment$Login_Account_numberActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"

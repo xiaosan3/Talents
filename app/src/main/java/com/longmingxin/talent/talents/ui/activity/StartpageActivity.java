@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
-import com.longmingxin.talent.talents.ui.login.LoginActivity;
+import com.longmingxin.talent.talents.ui.login.Login_ToActivity;
 
 public class StartpageActivity extends BaseActivity implements View.OnClickListener{
 
@@ -29,7 +29,7 @@ public class StartpageActivity extends BaseActivity implements View.OnClickListe
 
             @Override
             public void onFinish() {
-                startActivity(new Intent(StartpageActivity.this, LoginActivity.class));
+                startActivity(new Intent(StartpageActivity.this, Login_ToActivity.class));
             }
         }.start();
 
@@ -57,7 +57,7 @@ public class StartpageActivity extends BaseActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.skip:
-                startActivity(new Intent(StartpageActivity.this,LoginActivity.class));
+                startActivity(new Intent(StartpageActivity.this,Login_ToActivity.class));
                 finish();
                 break;
         }

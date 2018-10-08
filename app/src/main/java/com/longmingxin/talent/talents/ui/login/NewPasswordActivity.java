@@ -11,6 +11,7 @@ import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
 import com.longmingxin.talent.talents.mvp.contract.Contract;
 import com.longmingxin.talent.talents.mvp.presenter.setResetPswPresenter;
+import com.longmingxin.talent.talents.ui.fragments.LearningAbilityFragment;
 
 public class NewPasswordActivity extends BaseActivity<setResetPswPresenter> implements View.OnClickListener,Contract.IGetResetPswView{
 
@@ -84,7 +85,7 @@ public class NewPasswordActivity extends BaseActivity<setResetPswPresenter> impl
 
     @Override
     public void showIntent() {
-        startActivity(new Intent(this,Login_Account_numberActivity.class));
+        startActivity(new Intent(this,LearningAbilityFragment.Login_Account_numberActivity.class));
 
     }
 }

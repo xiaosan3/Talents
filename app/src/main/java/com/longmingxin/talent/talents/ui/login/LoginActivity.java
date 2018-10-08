@@ -15,6 +15,7 @@ import com.longmingxin.talent.talents.R;
 import com.longmingxin.talent.talents.base.BaseActivity;
 import com.longmingxin.talent.talents.mvp.presenter.setMessagePresenter;
 import com.longmingxin.talent.talents.ui.activity.MainActivity;
+import com.longmingxin.talent.talents.ui.fragments.LearningAbilityFragment;
 import com.longmingxin.talent.talents.ui.register.RegisterActivity;
 
 public class LoginActivity extends BaseActivity<setMessagePresenter> implements View.OnClickListener,com.longmingxin.talent.talents.mvp.contract.Contract.IGetMessageView {
@@ -96,49 +97,55 @@ public class LoginActivity extends BaseActivity<setMessagePresenter> implements 
             case R.id.login_Quick:
                 break;
             case R.id.login_Account:
-                startActivity(new Intent(this, Login_Account_numberActivity.class));
+                startActivity(new Intent(this, LearningAbilityFragment.Login_Account_numberActivity.class));
                 break;
             //获取验证码接口
             case R.id.loging_seconds:
                 presenter.setMessage(login_phone.getText().toString().trim());
-                //数字倒计时
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        //倒计时开始，循环
-                        while (countdown > 0) {
-                            runOnUiThread(new Runnable() {
-                                @Override
-                                public void run() {
-                                    loging_seconds.setTextColor(Color.parseColor("#b3b3b3"));
-                                    loging_seconds.setText(countdown + "s");
-                                }
-                            });
-                            try {
-                                Thread.sleep(1000); //强制线程休眠1秒，就是设置倒计时的间隔时间为1秒。
-                            } catch (InterruptedException e) {
-                                e.printStackTrace();
-                            }
-                            countdown--;
-                        }
-                        //倒计时结束
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                loging_seconds.setText("获取验证码");
-                                loging_seconds.setTextColor(Color.parseColor("#f39035"));
-                            }
-                        });
-                    }
-                }).start();
+                initCount();
                 break;
 
             case R.id.login_But:
                 presenter.setLogin(login_phone.getText().toString().trim(),login_Yanzhengma.getText().toString().trim());
                 break;
+            case R.id.login_QQ:
+                startActivity(new Intent(this,Login_ToActivity.class));
+                break;
         }
     }
 
+    private void initCount() {
+        //数字倒计时
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                //倒计时开始，循环
+                while (countdown > 0) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            loging_seconds.setTextColor(Color.parseColor("#b3b3b3"));
+                            loging_seconds.setText(countdown + "s");
+                        }
+                    });
+                    try {
+                        Thread.sleep(1000); //强制线程休眠1秒，就是设置倒计时的间隔时间为1秒。
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    countdown--;
+                }
+                //倒计时结束
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        loging_seconds.setText("获取验证码");
+                        loging_seconds.setTextColor(Color.parseColor("#f39035"));
+                    }
+                });
+            }
+        }).start();
+    }
 
 
     @Override

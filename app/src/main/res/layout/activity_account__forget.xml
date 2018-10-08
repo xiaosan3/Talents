@@ -6,35 +6,27 @@
     android:layout_height="match_parent"
    android:orientation="vertical"
     tools:context="com.longmingxin.talent.talents.ui.login.Account_ForgetActivity">
-    <RelativeLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/forget_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="128px"
+        android:layout_height="wrap_content"
         android:background="@color/colorRed">
 
-        <ImageView
-            android:id="@+id/forget_return_button"
-            android:layout_width="24px"
-            android:layout_height="44px"
-            android:layout_marginLeft="30px"
-            android:layout_marginTop="40px"
-            android:background="@drawable/return_button"
-            />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
             android:layout_gravity="center"
-            android:layout_marginTop="40px"
             android:text="重置密码"
-            android:textColor="@color/colorWhite"
-            android:textSize="40px" />
-    </RelativeLayout>
+            android:textColor="#ffffff"
+            android:textSize="36px" />
+
+    </android.support.v7.widget.Toolbar>
 
     <ImageView
         android:layout_width="137px"
         android:layout_height="84px"
         android:layout_gravity="center"
-        android:layout_marginTop="50px"
+        android:layout_marginTop="82px"
         android:src="@mipmap/login_logo" />
 
     <TextView
@@ -45,10 +37,12 @@
         android:text="龙才网"
         android:textColor="#484848"
         android:textSize="36px" />
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50px">
+        android:layout_marginTop="100px">
 
         <ImageView
             android:id="@+id/img_youhu"
@@ -82,7 +76,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10px">
+        android:layout_marginTop="15px">
 
         <ImageView
             android:id="@+id/img_yanzhengma"
@@ -135,7 +129,7 @@
         android:layout_width="600px"
         android:layout_height="80px"
         android:layout_gravity="center"
-        android:layout_marginTop="100px"
+        android:layout_marginTop="120px"
         android:background="@drawable/login"
         android:text="重置密码"
         android:textColor="@color/colorWhite"
@@ -144,7 +138,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80px"
+        android:layout_marginTop="110px"
 
         >
         <TextView
